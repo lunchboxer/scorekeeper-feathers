@@ -1,4 +1,4 @@
-const isBefore = require('validator/isBefore')
+const isBefore = require('validator/lib/isBefore')
 
 module.exports = function (options = {}) {
   return async context => {
