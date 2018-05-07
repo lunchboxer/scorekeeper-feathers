@@ -2,9 +2,7 @@
   "name": "scorekeeper-feathers",
   "version": "0.0.1",
   "main": "src",
-  "keywords": [
-    "feathers"
-  ],
+  "keywords": ["feathers"],
   "author": {
     "name": "James",
     "email": "metal.lunchbox@gmail.com"
@@ -21,7 +19,8 @@
     "test": "npm run eslint && npm run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "start": "node src/",
-    "mocha": "mocha test/ --recursive --exit"
+    "mocha": "mocha test/ --recursive --exit",
+    "format": "prettier-eslint \"src/**/*.js\" \"test/**/*.js\""
   },
   "dependencies": {
     "@feathersjs/authentication": "^2.1.1",
@@ -50,6 +49,7 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^4.0.1",
+    "prettier-eslint-cli": "^4.7.1",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
   }
