@@ -8,20 +8,30 @@ describe("'validate-birthdate' hook", () => {
   beforeEach(() => {
     app = feathers()
 
-    app.use('/dummy', {
-      async get (id) {
-        return { id }
+    app.use('/students', {
+      async create (data) {
+        return data
       }
     })
 
-    app.service('dummy').hooks({
-      before: validateBirthdate()
+    app.service('students').hooks({
+      before: {
+        create: validateBirthdate()
+      }
     })
   })
 
-  it('runs the hook', async () => {
-    const result = await app.service('dummy').get('test')
-
-    assert.deepEqual(result, { id: 'test' })
+  it('makes birthdate with midnight UTC time', async () => {
+    const user = { _id: 'test' }
+    const params = { user }
+    const student = await app.service('students').create(
+      {
+        chineseName: '范冰冰',
+        birthdate: '2012-04-23T18:25:43.511Z'
+      },
+      params
+    )
+    assert.equal(student.chineseName, '范冰冰')
+    assert.equal(student.birthdate, '2012-04-23T00:00:00Z')
   })
 })

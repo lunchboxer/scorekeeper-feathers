@@ -8,20 +8,29 @@ describe("'auto-pinyin' hook", () => {
   beforeEach(() => {
     app = feathers()
 
-    app.use('/dummy', {
-      async get (id) {
-        return { id }
+    app.use('/students', {
+      async create (data) {
+        return data
       }
     })
 
-    app.service('dummy').hooks({
-      before: autoPinyin()
+    app.service('students').hooks({
+      before: {
+        create: autoPinyin()
+      }
     })
   })
 
-  it('runs the hook', async () => {
-    const result = await app.service('dummy').get('test')
-
-    assert.deepEqual(result, { id: 'test' })
+  it('auto-fills pinyin field on new student', async () => {
+    const user = { _id: 'test' }
+    const params = { user }
+    const student = await app.service('students').create(
+      {
+        chineseName: '范冰冰'
+      },
+      params
+    )
+    assert.equal(student.chineseName, '范冰冰')
+    assert.equal(student.pinyinName, 'Fànbīngbīng')
   })
 })
