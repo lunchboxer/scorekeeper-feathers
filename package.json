@@ -2,7 +2,9 @@
   "name": "scorekeeper-feathers",
   "version": "0.0.1",
   "main": "src",
-  "keywords": ["feathers"],
+  "keywords": [
+    "feathers"
+  ],
   "author": {
     "name": "James",
     "email": "metal.lunchbox@gmail.com"
@@ -23,34 +25,36 @@
     "format": "prettier-eslint \"src/**/*.js\" \"test/**/*.js\""
   },
   "dependencies": {
-    "@feathersjs/authentication": "^2.1.1",
-    "@feathersjs/authentication-jwt": "^2.0.0",
-    "@feathersjs/authentication-local": "^1.1.0",
+    "@feathersjs/authentication": "^2.1.5",
+    "@feathersjs/authentication-jwt": "^2.0.1",
+    "@feathersjs/authentication-local": "^1.2.1",
     "@feathersjs/configuration": "^1.0.2",
-    "@feathersjs/errors": "^3.2.2",
-    "@feathersjs/express": "^1.1.2",
-    "@feathersjs/feathers": "^3.1.0",
-    "@feathersjs/socketio": "^3.1.0",
-    "compression": "^1.7.1",
+    "@feathersjs/errors": "^3.3.0",
+    "@feathersjs/express": "^1.2.2",
+    "@feathersjs/feathers": "^3.1.5",
+    "@feathersjs/socketio": "^3.2.1",
+    "compression": "^1.7.2",
     "cors": "^2.8.4",
-    "feathers-mongoose": "^6.1.0",
-    "helmet": "^3.9.0",
-    "mongoose": "^4.12.4",
+    "feathers-mongoose": "^6.1.1",
+    "feathers-sequelize": "^3.1.0",
+    "helmet": "^3.12.0",
+    "mongoose": "^4.13.12",
+    "mysql": "^2.15.0",
     "pinyin": "^2.8.3",
-    "serve-favicon": "^2.4.5",
-    "validator": "^9.4.0",
-    "winston": "^2.4.0"
+    "serve-favicon": "^2.5.0",
+    "validator": "^9.4.1",
+    "winston": "^2.4.2"
   },
   "devDependencies": {
-    "eslint": "^4.17.0",
-    "eslint-config-standard": "^11.0.0-beta.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^6.0.0",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "mocha": "^4.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "mocha": "^4.1.0",
     "prettier-eslint-cli": "^4.7.1",
-    "request": "^2.83.0",
+    "request": "^2.85.0",
     "request-promise": "^4.2.2"
   }
 }
