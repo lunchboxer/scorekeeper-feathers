@@ -9,7 +9,8 @@ module.exports = function (app) {
       pinyinName: String,
       englishName: String,
       birthdate: String,
-      gender: String
+      gender: String,
+      group: [{ type: Schema.Types.ObjectId, ref: 'student-group' }]
     },
     {
       timestamps: true
