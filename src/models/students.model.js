@@ -1,21 +1,43 @@
-// students-model.js - A mongoose model
+const Sequelize = require('sequelize')
+
+const DataTypes = Sequelize.DataTypes
+const now = new Date()
 
 module.exports = function (app) {
-  const mongooseClient = app.get('mongooseClient')
-  const { Schema } = mongooseClient
-  const students = new Schema(
+  const sequelizeClient = app.get('sequelizeClient')
+  const students = sequelizeClient.define(
+    'students',
     {
-      chineseName: { type: String, required: true },
-      pinyinName: String,
-      englishName: String,
-      birthdate: String,
-      gender: String,
-      group: [{ type: Schema.Types.ObjectId, ref: 'student-group' }]
+      chineseName: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      pinyinName: DataTypes.STRING,
+      englishName: DataTypes.STRING,
+      birthDate: {
+        type: DataTypes.DATEONLY,
+        validate: {
+          isBefore: {
+            args: now.toJSON(),
+            msg: 'Birth date must be a past date.'
+          }
+        }
+      },
+      gender: DataTypes.ENUM('M', 'F')
     },
     {
-      timestamps: true
+      hooks: {
+        beforeCount (options) {
+          options.raw = true
+        }
+      }
     }
   )
 
-  return mongooseClient.model('students', students)
+  // eslint-disable-next-line no-unused-vars
+  students.associate = function (models) {
+    // students.belongsTo(models.student_groups)
+  }
+
+  return students
 }

@@ -1,15 +1,15 @@
-const autoPinyin = require('../../hooks/auto-pinyin')
-const validateBirthdate = require('../../hooks/validate-birthdate')
 const { authenticate } = require('@feathersjs/authentication').hooks
+
+const autoPinyin = require('../../hooks/auto-pinyin')
 
 module.exports = {
   before: {
     all: [authenticate('jwt')],
     find: [],
     get: [],
-    create: [autoPinyin(), validateBirthdate()],
-    update: [autoPinyin(), validateBirthdate()],
-    patch: [validateBirthdate()],
+    create: [autoPinyin()],
+    update: [autoPinyin()],
+    patch: [],
     remove: []
   },
 

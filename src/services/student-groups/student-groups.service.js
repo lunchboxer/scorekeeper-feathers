@@ -1,5 +1,5 @@
 // Initializes the `studentGroups` service on path `/student-groups`
-const createService = require('feathers-mongoose')
+const createService = require('feathers-sequelize')
 const createModel = require('../../models/student-groups.model')
 const hooks = require('./student-groups.hooks')
 

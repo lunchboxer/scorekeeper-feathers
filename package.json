@@ -1,5 +1,6 @@
 {
-  "name": "scorekeeper-feathers",
+  "name": "scorekeeper-feathers-2",
+  "description": "scorekeeper",
   "version": "0.0.1",
   "main": "src",
   "keywords": [
@@ -9,6 +10,8 @@
     "name": "James",
     "email": "metal.lunchbox@gmail.com"
   },
+  "contributors": [],
+  "bugs": {},
   "directories": {
     "lib": "src",
     "test": "test/"
@@ -22,7 +25,8 @@
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "start": "node src/",
     "mocha": "mocha test/ --recursive --exit",
-    "format": "prettier-eslint \"src/**/*.js\" \"test/**/*.js\""
+    "format": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",
+    "start:dev": "nodemon src/"
   },
   "dependencies": {
     "@feathersjs/authentication": "^2.1.5",
@@ -35,14 +39,12 @@
     "@feathersjs/socketio": "^3.2.1",
     "compression": "^1.7.2",
     "cors": "^2.8.4",
-    "feathers-mongoose": "^6.1.1",
     "feathers-sequelize": "^3.1.0",
     "helmet": "^3.12.0",
-    "mongoose": "^4.13.12",
-    "mysql": "^2.15.0",
+    "pg": "^7.4.3",
     "pinyin": "^2.8.3",
+    "sequelize": "^4.37.7",
     "serve-favicon": "^2.5.0",
-    "validator": "^9.4.1",
     "winston": "^2.4.2"
   },
   "devDependencies": {
@@ -52,7 +54,8 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
-    "mocha": "^4.1.0",
+    "mocha": "^5.1.1",
+    "nodemon": "^1.17.4",
     "prettier-eslint-cli": "^4.7.1",
     "request": "^2.85.0",
     "request-promise": "^4.2.2"

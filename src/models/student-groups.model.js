@@ -1,17 +1,30 @@
-// studentGroups-model.js - A mongoose model
+const Sequelize = require('sequelize')
+
+const DataTypes = Sequelize.DataTypes
 
 module.exports = function (app) {
-  const mongooseClient = app.get('mongooseClient')
-  const { Schema } = mongooseClient
-  const studentGroups = new Schema(
+  const sequelizeClient = app.get('sequelizeClient')
+  const studentGroups = sequelizeClient.define(
+    'student_group',
     {
-      name: { type: String, required: true },
-      students: [{ type: Schema.Types.ObjectId, ref: 'student' }]
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
     },
     {
-      timestamps: true
+      hooks: {
+        beforeCount (options) {
+          options.raw = true
+        }
+      }
     }
   )
 
-  return mongooseClient.model('studentGroups', studentGroups)
+  // eslint-disable-next-line no-unused-vars
+  studentGroups.associate = function (models) {
+    studentGroups.hasMany(models.students, { foreignKey: 'group' })
+  }
+
+  return studentGroups
 }
