@@ -5,7 +5,7 @@ const DataTypes = Sequelize.DataTypes
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient')
   const studentGroups = sequelizeClient.define(
-    'student_group',
+    'student_groups',
     {
       name: {
         type: DataTypes.STRING,
