@@ -10,7 +10,11 @@ module.exports = function (app) {
     {
       value: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
+        validate: {
+          max: 5,
+          min: -5
+        }
       }
     },
     {
