@@ -10,11 +10,11 @@ module.exports = function (app) {
     {
       status: {
         type: DataTypes.ENUM(
-          'LeftEarly',
-          'Present',
-          'Late',
-          'Absent',
-          'LateLeftEarly'
+          'leftEarly',
+          'present',
+          'late',
+          'absent',
+          'lateLeftEarly'
         ),
         allowNull: false
       },
