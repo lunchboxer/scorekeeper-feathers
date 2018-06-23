@@ -1,6 +1,6 @@
 const pinyin = require('pinyin')
 
-module.exports = function (options = {}) {
+module.exports = function () {
   return async context => {
     const { data } = context
     if (!data.pinyinName) {
