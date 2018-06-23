@@ -9,7 +9,7 @@ module.exports = {
     get: [],
     create: [autoPinyin()],
     update: [autoPinyin()],
-    patch: [],
+    patch: [autoPinyin()],
     remove: []
   },
 
