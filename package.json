@@ -1,5 +1,5 @@
 {
-  "name": "scorekeeper-feathers-2",
+  "name": "scorekeeper-feathers",
   "description": "scorekeeper",
   "version": "0.0.1",
   "main": "src",
@@ -35,7 +35,7 @@
     "@feathersjs/configuration": "^1.0.2",
     "@feathersjs/errors": "^3.3.0",
     "@feathersjs/express": "^1.2.3",
-    "@feathersjs/feathers": "^3.1.6",
+    "@feathersjs/feathers": "^3.1.7",
     "@feathersjs/socketio": "^3.2.2",
     "compression": "^1.7.2",
     "cors": "^2.8.4",
@@ -43,9 +43,9 @@
     "helmet": "^3.12.1",
     "pg": "^7.4.3",
     "pinyin": "^2.8.3",
-    "sequelize": "^4.37.10",
+    "sequelize": "^4.38.0",
     "serve-favicon": "^2.5.0",
-    "winston": "^2.4.2"
+    "winston": "^2.4.3"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
