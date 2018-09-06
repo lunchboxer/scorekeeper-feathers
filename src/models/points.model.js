@@ -10,11 +10,7 @@ module.exports = function (app) {
     {
       value: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          max: 5,
-          min: -5
-        }
+        allowNull: false
       }
     },
     {
@@ -28,10 +24,8 @@ module.exports = function (app) {
 
   // eslint-disable-next-line no-unused-vars
   points.associate = function (models) {
-    // Define associations here
     points.belongsTo(models.students)
     points.belongsTo(models.class_sessions)
-    // See http://docs.sequelizejs.com/en/latest/docs/associations/
   }
 
   return points
