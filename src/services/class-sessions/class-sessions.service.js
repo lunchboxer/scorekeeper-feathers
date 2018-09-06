@@ -1,4 +1,4 @@
-// Initializes the `classSession` service on path `/class-session`
+// Initializes the `classSessions` service on path `/class-sessions`
 const createService = require('feathers-sequelize')
 const createModel = require('../../models/class-sessions.model')
 const hooks = require('./class-sessions.hooks')

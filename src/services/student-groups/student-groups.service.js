@@ -8,7 +8,6 @@ module.exports = function (app) {
   const paginate = app.get('paginate')
 
   const options = {
-    name: 'student-groups',
     Model,
     paginate
   }
@@ -16,7 +15,7 @@ module.exports = function (app) {
   // Initialize our service with any options it requires
   app.use('/student-groups', createService(options))
 
-  // Get our initialized service so that we can register hooks and filters
+  // Get our initialized service so that we can register hooks
   const service = app.service('student-groups')
 
   service.hooks(hooks)

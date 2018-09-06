@@ -1,8 +1,8 @@
 const assert = require('assert')
 const feathers = require('@feathersjs/feathers')
-const autoPinyin = require('../../src/hooks/auto-pinyin')
+const checkScheduleConflicts = require('../../src/hooks/check-schedule-conflicts')
 
-describe("'autoPinyin' hook", () => {
+describe("'checkScheduleConflicts' hook", () => {
   let app
 
   beforeEach(() => {
@@ -15,7 +15,7 @@ describe("'autoPinyin' hook", () => {
     })
 
     app.service('dummy').hooks({
-      before: autoPinyin()
+      before: checkScheduleConflicts()
     })
   })
 

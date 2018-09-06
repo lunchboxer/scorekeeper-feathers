@@ -1,5 +1,6 @@
 const { authenticate } = require('@feathersjs/authentication').hooks
-const checkScheduleConflicts = require('./../../hooks/check-schedule-conflicts')
+
+const checkScheduleConflicts = require('../../hooks/check-schedule-conflicts')
 
 module.exports = {
   before: {
