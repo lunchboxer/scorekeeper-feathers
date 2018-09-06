@@ -6,13 +6,9 @@
     "default": 10,
     "max": 50
   },
-  "postgres": "postgres://devscorer:devdevscore@localhost:5432/scorekeeper_feathers",
   "authentication": {
-    "secret": "d3211f2e2bb311a397b7aabb4e93657a5abd0028c18b410201da1beaf36c4f45a867efb95e827a248a8f05bd2266b59ba5661801a741a8c9cfe0474bfd043570d67631ca8998155fdee2df6ad8d47608b112b08f88e9f66f4a694c28ba96603c0d80ddbcf2437cb6c172915c0a518a3bbf05b9410ceb30cca4224674a1f6f3df743cd085371b8243c3e740b7e0165f6a1717594c0a9cc93e0af89f3e350a4842c35f3f6bb933c7edff0df35a7c4c7c001da05c3045111e73bf9ca66d7fa9db75b467bcd0f07d763168a41c1c67a0d6c8f192db5e45e41acd52fbf248fd4c978f70dd6818ca3cb5b77354c7fe3edfb6e3cb8bb9d397e96f84fedc3666c9d4f7df",
-    "strategies": [
-      "jwt",
-      "local"
-    ],
+    "secret": "d88c4fcebc6cb7a1ee5d5387f86eb113123768d29840b2e11816e7ac129a8fe34a3f99e758754bf99029ff08e6d5506f1c4ec6d5bb253bc6756066aa7e0abd0388f012fca67c8ecffc3da137890d3476611933d6079ac0111ad68f725a283731442b2d7e87b113774883d152bdaf103c90aa934076e176a8db3aa26d964a4378274596d9b540c0eb76565bcd7b07bc2f53b0ead33ff5b4b76a00e1928df20bf67bd83fce3f58263f24f524bd0a264c098700d10b5d78ff51b35cf9e132555a223b927a90ae43d5f0becbfaff150522617830a80b8e34c86841a29cfea57110848ac9148b6541f23de129c885197b5d48d1391fabc449e85e406baf7567da18b9",
+    "strategies": ["jwt", "local"],
     "path": "/authentication",
     "service": "users",
     "jwt": {
@@ -27,8 +23,9 @@
     },
     "local": {
       "entity": "user",
-      "usernameField": "email",
+      "usernameField": "username",
       "passwordField": "password"
     }
-  }
+  },
+  "postgres": "postgres://devscorer:devdevscore@localhost:5432/scorekeeper_feathers"
 }
