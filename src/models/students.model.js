@@ -14,7 +14,7 @@ module.exports = function (app) {
       },
       pinyinName: DataTypes.STRING,
       englishName: DataTypes.STRING,
-      birthDate: {
+      birthdate: {
         type: DataTypes.DATEONLY
       },
       gender: DataTypes.ENUM('M', 'F')
