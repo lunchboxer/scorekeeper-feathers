@@ -1,13 +1,15 @@
 const { authenticate } = require('@feathersjs/authentication').hooks
 
+const limitValues = require('../../hooks/limit-values');
+
 module.exports = {
   before: {
     all: [authenticate('jwt')],
     find: [],
     get: [],
-    create: [],
-    update: [],
-    patch: [],
+    create: [limitValues()],
+    update: [limitValues()],
+    patch: [limitValues()],
     remove: []
   },
 
