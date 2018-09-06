@@ -1,15 +1,29 @@
 const { authenticate } = require('@feathersjs/authentication').hooks
-
 const checkScheduleConflicts = require('../../hooks/check-schedule-conflicts')
+const sanityCheckSessionDates = require('../../hooks/sanity-check-session-dates')
+
+const checkSessionEndsAfterStart = require('../../hooks/check-session-ends-after-start');
 
 module.exports = {
   before: {
     all: [authenticate('jwt')],
     find: [],
     get: [],
-    create: [checkScheduleConflicts()],
-    update: [checkScheduleConflicts()],
-    patch: [checkScheduleConflicts()],
+    create: [
+      checkScheduleConflicts(),
+      sanityCheckSessionDates(),
+      checkSessionEndsAfterStart()
+    ],
+    update: [
+      checkScheduleConflicts(),
+      sanityCheckSessionDates(),
+      checkSessionEndsAfterStart()
+    ],
+    patch: [
+      checkScheduleConflicts(),
+      sanityCheckSessionDates(),
+      checkSessionEndsAfterStart()
+    ],
     remove: []
   },
 
