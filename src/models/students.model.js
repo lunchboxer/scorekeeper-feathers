@@ -8,10 +8,7 @@ module.exports = function (app) {
   const students = sequelizeClient.define(
     'students',
     {
-      chineseName: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
+      chineseName: DataTypes.STRING,
       pinyinName: DataTypes.STRING,
       englishName: DataTypes.STRING,
       birthdate: {
