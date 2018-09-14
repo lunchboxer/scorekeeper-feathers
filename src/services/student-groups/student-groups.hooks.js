@@ -4,8 +4,8 @@ const addRelationship = require('./../../hooks/add-relationship')
 module.exports = {
   before: {
     all: [authenticate('jwt')],
-    find: [addRelationship('student')],
-    get: [addRelationship('student')],
+    find: [addRelationship('students')],
+    get: [addRelationship('students')],
     create: [],
     update: [],
     patch: [],
