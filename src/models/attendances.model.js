@@ -21,14 +21,6 @@ module.exports = function (app) {
       arrivedAt: {
         type: DataTypes.DATE,
         allowNull: true
-      },
-      studentId: {
-        type: DataTypes.INTEGER,
-        unique: 'OnePerStudentPerSession'
-      },
-      classSessionId: {
-        type: DataTypes.INTEGER,
-        unique: 'OnePerStudentPerSession'
       }
     },
     {
@@ -42,12 +34,6 @@ module.exports = function (app) {
 
   // eslint-disable-next-line no-unused-vars
   attendances.associate = function (models) {
-    attendances.belongsTo(models.students, {
-      foreignKey: attendances.rawAttributes.studentId
-    })
-    attendances.belongsTo(models.class_sessions, {
-      foreignKey: attendances.rawAttributes.classSessionId
-    })
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   }
 

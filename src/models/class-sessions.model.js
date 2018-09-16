@@ -34,6 +34,7 @@ module.exports = function (app) {
   // eslint-disable-next-line no-unused-vars
   classSessions.associate = function (models) {
     classSessions.belongsTo(models.student_groups)
+    classSessions.hasMany(models.attendances, { foreignKey: 'session' })
   }
 
   return classSessions
