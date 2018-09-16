@@ -5,7 +5,7 @@ const hooks = require('./points.hooks')
 
 module.exports = function (app) {
   const Model = createModel(app)
-  const paginate = app.get('paginate')
+  const paginate = { default: 100, max: 500 }
 
   const options = {
     Model,
