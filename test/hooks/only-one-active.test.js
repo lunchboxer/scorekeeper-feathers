@@ -1,8 +1,8 @@
 const assert = require('assert')
 const feathers = require('@feathersjs/feathers')
-const sanityCheckSessionDates = require('../../src/hooks/sanity-check-session-dates')
+const onlyOneActive = require('../../src/hooks/only-one-active')
 
-describe("'SanityCheckSessionDates' hook", () => {
+describe("'onlyOneActive' hook", () => {
   let app
 
   beforeEach(() => {
@@ -15,7 +15,7 @@ describe("'SanityCheckSessionDates' hook", () => {
     })
 
     app.service('dummy').hooks({
-      before: sanityCheckSessionDates()
+      before: onlyOneActive()
     })
   })
 

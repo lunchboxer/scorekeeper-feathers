@@ -1,27 +1,27 @@
-const assert = require('assert');
-const feathers = require('@feathersjs/feathers');
-const checkSessionEndsAfterStart = require('../../src/hooks/check-session-ends-after-start');
+const assert = require('assert')
+const feathers = require('@feathersjs/feathers')
+const checkSessionEndsAfterStart = require('../../src/hooks/check-session-ends-after-start')
 
-describe('\'checkSessionEndsAfterStart\' hook', () => {
-  let app;
+describe("'checkSessionEndsAfterStart' hook", () => {
+  let app
 
   beforeEach(() => {
-    app = feathers();
+    app = feathers()
 
     app.use('/dummy', {
-      async get(id) {
-        return { id };
+      async get (id) {
+        return { id }
       }
-    });
+    })
 
     app.service('dummy').hooks({
       before: checkSessionEndsAfterStart()
-    });
-  });
+    })
+  })
 
   it('runs the hook', async () => {
-    const result = await app.service('dummy').get('test');
-    
-    assert.deepEqual(result, { id: 'test' });
-  });
-});
+    const result = await app.service('dummy').get('test')
+
+    assert.deepEqual(result, { id: 'test' })
+  })
+})
