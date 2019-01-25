@@ -1,6 +1,6 @@
 // Initializes the `commands` service on path `/commands`
 const createService = require('feathers-memory')
-const hooks = require('./commands.hooks')
+const hooks = require('./messages.hooks')
 
 module.exports = function (app) {
   const paginate = app.get('paginate')
@@ -10,10 +10,10 @@ module.exports = function (app) {
   }
 
   // Initialize our service with any options it requires
-  app.use('/commands', createService(options))
+  app.use('/messages', createService(options))
 
   // Get our initialized service so that we can register hooks
-  const service = app.service('commands')
+  const service = app.service('messages')
 
   service.hooks(hooks)
 }
