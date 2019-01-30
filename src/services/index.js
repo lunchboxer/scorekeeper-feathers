@@ -6,6 +6,7 @@ const classSessions = require('./class-sessions/class-sessions.service.js')
 const attendances = require('./attendances/attendances.service.js')
 const viewers = require('./viewers/viewers.service.js')
 const messages = require('./messages/messages.service.js')
+const semesters = require('./semesters/semesters.service.js')
 // eslint-disable-next-line no-unused-vars
 module.exports = function (app) {
   app.configure(users)
@@ -16,4 +17,5 @@ module.exports = function (app) {
   app.configure(attendances)
   app.configure(viewers)
   app.configure(messages)
+  app.configure(semesters)
 }

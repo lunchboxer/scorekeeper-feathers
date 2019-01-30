@@ -5,11 +5,19 @@ const DataTypes = Sequelize.DataTypes
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient')
-  const studentGroups = sequelizeClient.define(
-    'student_groups',
+  const semesters = sequelizeClient.define(
+    'semesters',
     {
       name: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
+        allowNull: false
+      },
+      startDate: {
+        type: DataTypes.DATEONLY,
+        allowNull: false
+      },
+      endDate: {
+        type: DataTypes.DATEONLY,
         allowNull: false
       }
     },
@@ -23,10 +31,10 @@ module.exports = function (app) {
   )
 
   // eslint-disable-next-line no-unused-vars
-  studentGroups.associate = function (models) {
-    studentGroups.hasMany(models.students, { foreignKey: 'group' })
-    studentGroups.belongsTo(models.semesters)
+  semesters.associate = function (models) {
+    // Define associations here
+    // See http://docs.sequelizejs.com/en/latest/docs/associations/
   }
 
-  return studentGroups
+  return semesters
 }
