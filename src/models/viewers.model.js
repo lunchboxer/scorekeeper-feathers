@@ -1,32 +1,18 @@
-// See http://docs.sequelizejs.com/en/latest/docs/models-definition/
+// viewers-model.js - A mongoose model
+//
+// See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
-const Sequelize = require('sequelize')
-const DataTypes = Sequelize.DataTypes
-
 module.exports = function (app) {
-  const sequelizeClient = app.get('sequelizeClient')
-  const viewers = sequelizeClient.define(
-    'viewers',
+  const mongooseClient = app.get('mongooseClient')
+  const { Schema } = mongooseClient
+  const viewers = new Schema(
     {
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false
-      }
+      name: { type: String, required: true }
     },
     {
-      hooks: {
-        beforeCount (options) {
-          options.raw = true
-        }
-      }
+      timestamps: true
     }
   )
 
-  // eslint-disable-next-line no-unused-vars
-  viewers.associate = function (models) {
-    // Define associations here
-    // See http://docs.sequelizejs.com/en/latest/docs/associations/
-  }
-
-  return viewers
+  return mongooseClient.model('viewers', viewers)
 }

@@ -1,41 +1,22 @@
-// See http://docs.sequelizejs.com/en/latest/docs/models-definition/
+// class-sessions-model.js - A mongoose model
+//
+// See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
-const Sequelize = require('sequelize')
-const DataTypes = Sequelize.DataTypes
-
 module.exports = function (app) {
-  const sequelizeClient = app.get('sequelizeClient')
-  const classSessions = sequelizeClient.define(
-    'class_sessions',
+  const mongooseClient = app.get('mongooseClient')
+  const { Schema } = mongooseClient
+  const ObjectId = Schema.Types.ObjectId
+  const classSessions = new Schema(
     {
-      startsAt: {
-        type: DataTypes.DATE,
-        allowNull: false
-      },
-      endsAt: {
-        type: DataTypes.DATE,
-        allowNull: false
-      },
-      stage: {
-        type: DataTypes.ENUM('Inactive', 'Active', 'Started', 'Ended'),
-        allowNull: false,
-        defaultValue: 'Inactive'
-      }
+      stage: { type: String, required: true, default: 'Inactive' },
+      startsAt: { type: Date, required: true },
+      endsAt: { type: Date, required: true },
+      group: { type: ObjectId, ref: 'groups' }
     },
     {
-      hooks: {
-        beforeCount (options) {
-          options.raw = true
-        }
-      }
+      timestamps: true
     }
   )
 
-  // eslint-disable-next-line no-unused-vars
-  classSessions.associate = function (models) {
-    classSessions.belongsTo(models.student_groups)
-    classSessions.hasMany(models.attendances, { foreignKey: 'session' })
-  }
-
-  return classSessions
+  return mongooseClient.model('classSessions', classSessions)
 }

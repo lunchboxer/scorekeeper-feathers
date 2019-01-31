@@ -9,7 +9,7 @@ module.exports = function () {
     // check the database for all class-sessions to find if there are any overlaps.
     const startsAtConflicts = await context.app.service('class-sessions').find({
       query: {
-        id: { $ne: id },
+        _id: { $ne: id },
         startsAt: { $lte: startsAt },
         endsAt: { $gte: startsAt }
       }
@@ -19,7 +19,7 @@ module.exports = function () {
     }
     const endsAtConflicts = await context.app.service('class-sessions').find({
       query: {
-        id: { $ne: id },
+        _id: { $ne: id },
         startsAt: { $lte: endsAt },
         endsAt: { $gte: endsAt }
       }

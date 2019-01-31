@@ -1,5 +1,5 @@
-// Initializes the `viewer` service on path `/viewer`
-const createService = require('feathers-sequelize')
+// Initializes the `viewers` service on path `/viewers`
+const createService = require('feathers-mongoose')
 const createModel = require('../../models/viewers.model')
 const hooks = require('./viewers.hooks')
 

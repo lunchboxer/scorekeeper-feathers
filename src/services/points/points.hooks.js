@@ -1,5 +1,4 @@
 const { authenticate } = require('@feathersjs/authentication').hooks
-
 const limitValues = require('../../hooks/limit-values')
 
 module.exports = {

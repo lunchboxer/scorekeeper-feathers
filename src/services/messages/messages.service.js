@@ -1,4 +1,4 @@
-// Initializes the `commands` service on path `/commands`
+// Initializes the `messages` service on path `/messages`
 const createService = require('feathers-memory')
 const hooks = require('./messages.hooks')
 

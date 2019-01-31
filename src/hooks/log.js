@@ -19,7 +19,7 @@ module.exports = function () {
       logger.debug('Hook Context', util.inspect(context, { colors: false }))
     }
 
-    if (context.error) {
+    if (context.error && !context.result) {
       logger.error(context.error.stack)
     }
   }

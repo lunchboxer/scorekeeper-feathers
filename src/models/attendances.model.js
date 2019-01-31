@@ -1,41 +1,22 @@
-// See http://docs.sequelizejs.com/en/latest/docs/models-definition/
+// attendances-model.js - A mongoose model
+//
+// See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
-const Sequelize = require('sequelize')
-const DataTypes = Sequelize.DataTypes
-
 module.exports = function (app) {
-  const sequelizeClient = app.get('sequelizeClient')
-  const attendances = sequelizeClient.define(
-    'attendances',
+  const mongooseClient = app.get('mongooseClient')
+  const { Schema } = mongooseClient
+  const ObjectId = Schema.Types.ObjectId
+  const attendances = new Schema(
     {
-      status: {
-        type: DataTypes.ENUM(
-          'leftEarly',
-          'present',
-          'late',
-          'absent',
-          'lateLeftEarly'
-        ),
-        allowNull: false
-      },
-      arrivedAt: {
-        type: DataTypes.DATE,
-        allowNull: true
-      }
+      status: { type: String, required: true },
+      arrivedAt: Date,
+      student: { type: ObjectId, required: true, ref: 'students' },
+      classSession: { type: ObjectId, required: true, ref: 'classSessions' }
     },
     {
-      hooks: {
-        beforeCount (options) {
-          options.raw = true
-        }
-      }
+      timestamps: true
     }
   )
 
-  // eslint-disable-next-line no-unused-vars
-  attendances.associate = function (models) {
-    // See http://docs.sequelizejs.com/en/latest/docs/associations/
-  }
-
-  return attendances
+  return mongooseClient.model('attendances', attendances)
 }

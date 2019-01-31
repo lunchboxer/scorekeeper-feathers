@@ -1,7 +1,9 @@
-const { authenticate } = require('@feathersjs/authentication').hooks
 const checkScheduleConflicts = require('../../hooks/check-schedule-conflicts')
+const { authenticate } = require('@feathersjs/authentication').hooks
 const sanityCheckSessionDates = require('../../hooks/check-session-dates-within-year')
 const checkSessionEndsAfterStart = require('../../hooks/check-session-ends-after-start')
+
+const occursDuringSemester = require('../../hooks/occurs-during-semester')
 
 module.exports = {
   before: {
@@ -11,17 +13,20 @@ module.exports = {
     create: [
       checkScheduleConflicts(),
       sanityCheckSessionDates(),
-      checkSessionEndsAfterStart()
+      checkSessionEndsAfterStart(),
+      occursDuringSemester()
     ],
     update: [
       checkScheduleConflicts(),
       sanityCheckSessionDates(),
-      checkSessionEndsAfterStart()
+      checkSessionEndsAfterStart(),
+      occursDuringSemester()
     ],
     patch: [
       checkScheduleConflicts(),
       sanityCheckSessionDates(),
-      checkSessionEndsAfterStart()
+      checkSessionEndsAfterStart(),
+      occursDuringSemester()
     ],
     remove: []
   },

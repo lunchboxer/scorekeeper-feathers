@@ -1,7 +1,6 @@
 const { authenticate } = require('@feathersjs/authentication').hooks
-const autoPinyin = require('../../hooks/auto-pinyin')
-
 const checkBirthdate = require('../../hooks/check-birthdate')
+const autoPinyin = require('../../hooks/auto-pinyin')
 
 module.exports = {
   before: {

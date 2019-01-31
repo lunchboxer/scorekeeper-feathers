@@ -1,8 +1,8 @@
 const assert = require('assert')
 const feathers = require('@feathersjs/feathers')
-const onlyOneActive = require('../../src/hooks/only-one-active')
+const occursDuringSemester = require('../../src/hooks/occurs-during-semester')
 
-describe("'onlyOneActive' hook", () => {
+describe("'occurs-during-semester' hook", () => {
   let app
 
   beforeEach(() => {
@@ -15,7 +15,7 @@ describe("'onlyOneActive' hook", () => {
     })
 
     app.service('dummy').hooks({
-      before: onlyOneActive()
+      before: occursDuringSemester()
     })
   })
 

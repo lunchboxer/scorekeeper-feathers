@@ -1,40 +1,20 @@
-// See http://docs.sequelizejs.com/en/latest/docs/models-definition/
+// semesters-model.js - A mongoose model
+//
+// See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
-const Sequelize = require('sequelize')
-const DataTypes = Sequelize.DataTypes
-
 module.exports = function (app) {
-  const sequelizeClient = app.get('sequelizeClient')
-  const semesters = sequelizeClient.define(
-    'semesters',
+  const mongooseClient = app.get('mongooseClient')
+  const { Schema } = mongooseClient
+  const semesters = new Schema(
     {
-      name: {
-        type: DataTypes.TEXT,
-        allowNull: false
-      },
-      startDate: {
-        type: DataTypes.DATEONLY,
-        allowNull: false
-      },
-      endDate: {
-        type: DataTypes.DATEONLY,
-        allowNull: false
-      }
+      name: { type: String, required: true },
+      startDate: { type: Date, required: true },
+      endDate: { type: Date, required: true }
     },
     {
-      hooks: {
-        beforeCount (options) {
-          options.raw = true
-        }
-      }
+      timestamps: true
     }
   )
 
-  // eslint-disable-next-line no-unused-vars
-  semesters.associate = function (models) {
-    // Define associations here
-    // See http://docs.sequelizejs.com/en/latest/docs/associations/
-  }
-
-  return semesters
+  return mongooseClient.model('semesters', semesters)
 }

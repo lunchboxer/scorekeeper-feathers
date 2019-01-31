@@ -1,5 +1,5 @@
 // Initializes the `attendances` service on path `/attendances`
-const createService = require('feathers-sequelize')
+const createService = require('feathers-mongoose')
 const createModel = require('../../models/attendances.model')
 const hooks = require('./attendances.hooks')
 

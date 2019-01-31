@@ -1,32 +1,21 @@
-// See http://docs.sequelizejs.com/en/latest/docs/models-definition/
+// points-model.js - A mongoose model
+//
+// See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
-const Sequelize = require('sequelize')
-const DataTypes = Sequelize.DataTypes
-
 module.exports = function (app) {
-  const sequelizeClient = app.get('sequelizeClient')
-  const points = sequelizeClient.define(
-    'points',
+  const mongooseClient = app.get('mongooseClient')
+  const { Schema } = mongooseClient
+  const ObjectId = Schema.Types.ObjectId
+  const points = new Schema(
     {
-      value: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-      }
+      value: { type: Number, required: true },
+      student: { type: ObjectId, required: true, ref: 'students' },
+      classSession: { type: ObjectId, required: true, ref: 'classSessions' }
     },
     {
-      hooks: {
-        beforeCount (options) {
-          options.raw = true
-        }
-      }
+      timestamps: true
     }
   )
 
-  // eslint-disable-next-line no-unused-vars
-  points.associate = function (models) {
-    points.belongsTo(models.students)
-    points.belongsTo(models.class_sessions)
-  }
-
-  return points
+  return mongooseClient.model('points', points)
 }

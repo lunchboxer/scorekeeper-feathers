@@ -1,4 +1,4 @@
 {
-  "host": "scorekeeper-feathers-app.feathersjs.com",
+  "host": "feathers-mongoose-test-app.feathersjs.com",
   "port": "PORT"
 }

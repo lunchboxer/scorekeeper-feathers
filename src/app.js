@@ -15,9 +15,11 @@ const services = require('./services')
 const appHooks = require('./app.hooks')
 const channels = require('./channels')
 
+const mongoose = require('./mongoose')
+
 const authentication = require('./authentication')
 
-const sequelize = require('./sequelize')
+const mongodb = require('./mongodb')
 
 const app = express(feathers())
 
@@ -37,7 +39,9 @@ app.use('/', express.static(app.get('public')))
 app.configure(express.rest())
 app.configure(socketio())
 
-app.configure(sequelize)
+app.configure(mongoose)
+
+app.configure(mongodb)
 
 // Configure other middleware (see `middleware/index.js`)
 app.configure(middleware)

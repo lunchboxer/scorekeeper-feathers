@@ -10,7 +10,7 @@ module.exports = function () {
     // check the database to find if there are any overlaps.
     const startDateConflicts = await context.service.find({
       query: {
-        id: { $ne: id },
+        _id: { $ne: id },
         startDate: { $lte: startDate },
         endDate: { $gte: startDate }
       }
@@ -20,7 +20,7 @@ module.exports = function () {
     }
     const endDateConflicts = await context.service.find({
       query: {
-        id: { $ne: id },
+        _id: { $ne: id },
         startDate: { $lte: endDate },
         endDate: { $gte: endDate }
       }
