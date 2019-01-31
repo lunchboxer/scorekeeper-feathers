@@ -11,7 +11,7 @@ module.exports = function (app) {
       status: { type: String, required: true },
       arrivedAt: Date,
       student: { type: ObjectId, required: true, ref: 'students' },
-      classSession: { type: ObjectId, required: true, ref: 'classSessions' }
+      session: { type: ObjectId, required: true, ref: 'classSessions' }
     },
     {
       timestamps: true

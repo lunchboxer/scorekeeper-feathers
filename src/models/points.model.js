@@ -10,7 +10,7 @@ module.exports = function (app) {
     {
       value: { type: Number, required: true },
       student: { type: ObjectId, required: true, ref: 'students' },
-      classSession: { type: ObjectId, required: true, ref: 'classSessions' }
+      session: { type: ObjectId, required: true, ref: 'classSessions' }
     },
     {
       timestamps: true
