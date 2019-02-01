@@ -9,13 +9,17 @@ module.exports = function (app) {
   const groups = new Schema(
     {
       name: { type: String, required: true },
-      students: { type: [ObjectId], ref: 'students' },
-      semester: { type: ObjectId, ref: 'semesters' }
+      semester: { type: ObjectId, ref: 'semesters', required: true }
     },
     {
       timestamps: true
     }
   )
+  groups.virtual('students', {
+    ref: 'students',
+    localField: '_id',
+    foreignField: 'groups'
+  })
 
   return mongooseClient.model('groups', groups)
 }

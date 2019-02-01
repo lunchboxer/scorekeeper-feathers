@@ -24,10 +24,11 @@
   "scripts": {
     "test": "npm run eslint && NODE_ENV= npm run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
-    "dev": "nodemon src/",
-    "start": "node src/",
+    "dev": "PORT=3050 nodemon src/",
+    "start": "PORT=3050 node src/",
     "mocha": "mocha test/ --recursive --exit",
-    "format": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\""
+    "format": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",
+    "debug": "PORT=9229 node src/"
   },
   "dependencies": {
     "@feathersjs/authentication": "^2.1.16",

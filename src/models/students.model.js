@@ -13,7 +13,7 @@ module.exports = function (app) {
       englishName: String,
       birthdate: Date,
       gender: String,
-      groups: { type: [ObjectId], ref: 'groups' }
+      groups: [{ type: ObjectId, ref: 'groups' }]
     },
     {
       timestamps: true
