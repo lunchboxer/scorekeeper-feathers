@@ -1,0 +1,201 @@
+{
+  "options": {
+    "ver": "1.0.0",
+    "inspectConflicts": false,
+    "semicolons": false,
+    "freeze": [],
+    "ts": false
+  },
+  "app": {
+    "environmentsAllowingSeedData": "development",
+    "seedData": true,
+    "name": "feathers-plus-test",
+    "description": "Project feathers-plus-test",
+    "src": "src",
+    "packager": "npm@>= 3.0.0",
+    "providers": [
+      "rest",
+      "socketio"
+    ]
+  },
+  "services": {
+    "users": {
+      "name": "users",
+      "nameSingular": "user",
+      "subFolder": "",
+      "fileName": "users",
+      "adapter": "mongoose",
+      "path": "/users",
+      "isAuthEntity": true,
+      "requiresAuth": true,
+      "graphql": true
+    },
+    "roles": {
+      "name": "roles",
+      "nameSingular": "role",
+      "subFolder": "",
+      "fileName": "roles",
+      "adapter": "mongoose",
+      "path": "/roles",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": true
+    },
+    "students": {
+      "name": "students",
+      "nameSingular": "student",
+      "subFolder": "",
+      "fileName": "students",
+      "adapter": "mongoose",
+      "path": "/students",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": true
+    },
+    "groups": {
+      "name": "groups",
+      "nameSingular": "group",
+      "subFolder": "",
+      "fileName": "groups",
+      "adapter": "mongoose",
+      "path": "/groups",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": true
+    },
+    "semesters": {
+      "name": "semesters",
+      "nameSingular": "semester",
+      "subFolder": "",
+      "fileName": "semesters",
+      "adapter": "mongoose",
+      "path": "/semesters",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": true
+    },
+    "attendances": {
+      "name": "attendances",
+      "nameSingular": "attendance",
+      "subFolder": "",
+      "fileName": "attendances",
+      "adapter": "mongoose",
+      "path": "/attendances",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": true
+    },
+    "sessions": {
+      "name": "sessions",
+      "nameSingular": "session",
+      "subFolder": "",
+      "fileName": "sessions",
+      "adapter": "mongoose",
+      "path": "/sessions",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": true
+    },
+    "messages": {
+      "name": "messages",
+      "nameSingular": "message",
+      "subFolder": "",
+      "fileName": "messages",
+      "adapter": "memory",
+      "path": "/messages",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": false
+    },
+    "points": {
+      "name": "points",
+      "nameSingular": "point",
+      "subFolder": "",
+      "fileName": "points",
+      "adapter": "mongoose",
+      "path": "/points",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": true
+    },
+    "viewers": {
+      "name": "viewers",
+      "nameSingular": "viewer",
+      "subFolder": "",
+      "fileName": "viewers",
+      "adapter": "mongoose",
+      "path": "/viewers",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": true
+    },
+    "groupStudents": {
+      "name": "groupStudents",
+      "nameSingular": "groupStudent",
+      "subFolder": "",
+      "fileName": "group-students",
+      "adapter": "mongoose",
+      "path": "/group-students",
+      "isAuthEntity": false,
+      "requiresAuth": true,
+      "graphql": true
+    }
+  },
+  "hooks": {
+    "add-timestamp": {
+      "fileName": "add-timestamp",
+      "camelName": "addTimestamp",
+      "ifMulti": "n",
+      "multiServices": [],
+      "singleService": "messages"
+    },
+    "limit-entries": {
+      "fileName": "limit-entries",
+      "camelName": "limitEntries",
+      "ifMulti": "n",
+      "multiServices": [],
+      "singleService": "messages"
+    },
+    "no-duplicate-pairs": {
+      "fileName": "no-duplicate-pairs",
+      "camelName": "noDuplicatePairs",
+      "ifMulti": "n",
+      "multiServices": [],
+      "singleService": "groupStudents"
+    },
+    "disallow-method": {
+      "fileName": "disallow-method",
+      "camelName": "disallowMethod",
+      "ifMulti": "y",
+      "multiServices": [
+        "groupStudents"
+      ],
+      "singleService": ""
+    },
+    "one-group-per-student-per-semester": {
+      "fileName": "one-group-per-student-per-semester",
+      "camelName": "oneGroupPerStudentPerSemester",
+      "ifMulti": "n",
+      "multiServices": [],
+      "singleService": "groupStudents"
+    }
+  },
+  "authentication": {
+    "strategies": [
+      "local"
+    ],
+    "entity": "users"
+  },
+  "connections": {
+    "mongoose": {
+      "database": "mongodb",
+      "adapter": "mongoose",
+      "connectionString": "mongodb://localhost:27017/feathers_plus_test"
+    },
+    "mongodb": {
+      "database": "mongodb",
+      "adapter": "mongodb",
+      "connectionString": "mongodb://localhost:27017/feathers_plus_test"
+    }
+  }
+}

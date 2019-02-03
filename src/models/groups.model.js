@@ -1,25 +1,32 @@
-// groups-model.js - A mongoose model
+
+// groups-model.js - A Mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
-module.exports = function (app) {
-  const mongooseClient = app.get('mongooseClient')
-  const { Schema } = mongooseClient
-  const ObjectId = Schema.Types.ObjectId
-  const groups = new Schema(
-    {
-      name: { type: String, required: true },
-      semester: { type: ObjectId, ref: 'semesters', required: true }
-    },
-    {
-      timestamps: true
-    }
-  )
-  groups.virtual('students', {
-    ref: 'students',
-    localField: '_id',
-    foreignField: 'groups'
-  })
+// !<DEFAULT> code: mongoose_schema
+const mongooseSchema = require('../services/groups/groups.mongoose')
+// !end
+// !code: mongoose_imports // !end
+// !code: mongoose_init // !end
 
-  return mongooseClient.model('groups', groups)
+let moduleExports = function (app) {
+  let mongooseClient = app.get('mongooseClient')
+  // !code: mongoose_func_init // !end
+
+  // !<DEFAULT> code: mongoose_client
+  const groups = new mongooseClient.Schema(mongooseSchema, { timestamps: true })
+  // !end
+
+  let existingModel = mongooseClient.models['groups'] // needed for client/server tests
+  let returns = existingModel || mongooseClient.model('groups', groups)
+
+  // !code: mongoose_func_return // !end
+  return returns
 }
+// !code: mongoose_more // !end
+
+// !code: mongoose_exports // !end
+module.exports = moduleExports
+
+// !code: mongoose_funcs // !end
+// !code: mongoose_end // !end

@@ -6,9 +6,11 @@
     "default": 50,
     "max": 500
   },
-  "mongodb": "mongodb://localhost:27017/feathers_mongoose_test",
+  "tests": {
+    "environmentsAllowingSeedData": ["development"]
+  },
   "authentication": {
-    "secret": "b021a20551ba6b25a6af03a7b439240f17db2d908d12d8c2fd38bfe0f820c8de1e8b69d9bcd6daf0b69560b61b2afa7e20b746ae67906b8e212d603bf75c18c92b904be389d45f0f1a9e8bce19923519348cd3ff54ad1fcb770b99002074266141830a1119ec275ba9d9dd46f53310434dfd7bf30f99dc5b759525c3d318448c974886fb018b66c5ede5835c2369c4407cc9f50a95274f84321d7ae1d3447c079317301dcb33c75044d1d44fbe6aa2f3dcc8928f0de2d7da21f8f173f8a105b94062bb9f6198b9154ebeef79375f35a89e46afda7a359e0046cd3b0bacf1733de3bdb802d3111016371750b3cd284be764522034582916048ec9be9ebe3476e6",
+    "secret": "444eea3355af92cf7834be14c6d2d970127dbc41fd6d845215563ff8c99a55d4f35f2efe21eabd148315ecdad9b818ad17db9b8648d305794b5b570a1917199af3eaa149ea8ae115b587f0fcba97d1da5a6f10bc266fa076b1c06e6779ba33a4688b6653d759100490b61a2a3145e90f5dd3cda2a43c5557cc25d176cb500da789faa1ec0875c9a1ce3a50205d703da661722013e7ede68630efdefc16e6d6c55a189ddfee1a63ab0007c1a156519dfa231b3a8722d9706b525db88d3345425dbdc1c9b297d290468280c6784fea04d30b1f0712841ac85138538830dfdf2c8acf61d680bcc8312d53e836a46b7605c1e015dd74340ae265ad1e657c23100ea9",
     "strategies": ["jwt", "local"],
     "path": "/authentication",
     "service": "users",
@@ -27,5 +29,6 @@
       "usernameField": "username",
       "passwordField": "password"
     }
-  }
+  },
+  "mongodb": "mongodb://localhost:27017/feathers_plus_test"
 }

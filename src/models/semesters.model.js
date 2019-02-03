@@ -1,20 +1,32 @@
-// semesters-model.js - A mongoose model
+
+// semesters-model.js - A Mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
-module.exports = function (app) {
-  const mongooseClient = app.get('mongooseClient')
-  const { Schema } = mongooseClient
-  const semesters = new Schema(
-    {
-      name: { type: String, required: true },
-      startDate: { type: Date, required: true },
-      endDate: { type: Date, required: true }
-    },
-    {
-      timestamps: true
-    }
-  )
+// !<DEFAULT> code: mongoose_schema
+const mongooseSchema = require('../services/semesters/semesters.mongoose')
+// !end
+// !code: mongoose_imports // !end
+// !code: mongoose_init // !end
 
-  return mongooseClient.model('semesters', semesters)
+let moduleExports = function (app) {
+  let mongooseClient = app.get('mongooseClient')
+  // !code: mongoose_func_init // !end
+
+  // !<DEFAULT> code: mongoose_client
+  const semesters = new mongooseClient.Schema(mongooseSchema, { timestamps: true })
+  // !end
+
+  let existingModel = mongooseClient.models['semesters'] // needed for client/server tests
+  let returns = existingModel || mongooseClient.model('semesters', semesters)
+
+  // !code: mongoose_func_return // !end
+  return returns
 }
+// !code: mongoose_more // !end
+
+// !code: mongoose_exports // !end
+module.exports = moduleExports
+
+// !code: mongoose_funcs // !end
+// !code: mongoose_end // !end

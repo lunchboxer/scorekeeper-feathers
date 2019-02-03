@@ -4,5 +4,14 @@
     "node": true,
     "mocha": true
   },
-  "extends": "standard"
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "extends": "standard",
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "comma-dangle": ["error", "always-multiline"]
+  }
 }

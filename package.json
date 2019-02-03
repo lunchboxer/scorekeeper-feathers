@@ -14,23 +14,25 @@
   "bugs": {},
   "directories": {
     "lib": "src",
-    "test": "test/",
-    "config": "config/"
+    "test": "test/"
   },
   "engines": {
     "node": "^10.0.0",
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "test": "npm run eslint && NODE_ENV= npm run mocha",
+    "test": "npm run eslint && npm run mocha",
+    "test:all": "npm run eslint && cross-env NODE_ENV=development npm run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "dev": "PORT=3050 nodemon src/",
+    "dev:seed": "PORT=3050 nodemon src/ --seed",
     "start": "PORT=3050 node src/",
-    "mocha": "mocha test/ --recursive --exit",
-    "format": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",
-    "debug": "PORT=9229 node src/"
+    "start:seed": "cross-env NODE_ENV=development node src/ --seed",
+    "mocha": "mocha test/ --recursive --exit --timeout 10000",
+    "format": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\""
   },
   "dependencies": {
+    "@feathers-plus/test-utils": "^0.3.5",
     "@feathersjs/authentication": "^2.1.16",
     "@feathersjs/authentication-jwt": "^2.0.10",
     "@feathersjs/authentication-local": "^1.2.9",
@@ -39,22 +41,25 @@
     "@feathersjs/express": "^1.3.1",
     "@feathersjs/feathers": "^3.3.1",
     "@feathersjs/socketio": "^3.2.9",
+    "ajv": "^5.5.2",
     "compression": "^1.7.3",
     "cors": "^2.8.5",
+    "cross-env": "^5.2.0",
+    "feathers-hooks-common": "^4.20.2",
     "feathers-memory": "^3.0.2",
     "feathers-mongodb": "^4.0.4",
-    "feathers-mongoose": "^7.3.0",
+    "feathers-mongoose": "^7.3.1",
     "helmet": "^3.15.0",
+    "lodash.merge": "^4.6.1",
     "mongodb": "^3.1.13",
     "mongodb-core": "^3.1.11",
-    "mongoose": "^5.4.8",
+    "mongoose": "^5.4.9",
     "pinyin": "^2.8.3",
-    "prettier-eslint-cli": "^4.7.1",
     "serve-favicon": "^2.5.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "eslint": "^5.12.1",
+    "eslint": "^5.13.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
@@ -62,6 +67,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.9",
+    "prettier-eslint-cli": "^4.7.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
   }

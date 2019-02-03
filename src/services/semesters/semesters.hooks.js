@@ -1,35 +1,70 @@
+// Hooks for service `semesters`. (Can be re-generated.)
+const commonHooks = require('feathers-hooks-common')
 const { authenticate } = require('@feathersjs/authentication').hooks
-const semesterEndsAfterStart = require('../../hooks/semester-ends-after-start')
-const semesterDateConflicts = require('../../hooks/semester-date-conflicts')
+// !code: imports
+const dateConflicts = require('./hooks/date-conflicts')
+const mustEndAfterStarts = require('./hooks/must-end-after-starts')
+// !end
 
-module.exports = {
+// !<DEFAULT> code: used
+// eslint-disable-next-line no-unused-vars
+const { iff } = commonHooks
+// eslint-disable-next-line no-unused-vars
+const {
+  create,
+  update,
+  patch,
+  validateCreate,
+  validateUpdate,
+  validatePatch,
+} = require('./semesters.validate')
+// !end
+
+// !code: init // !end
+
+let moduleExports = {
   before: {
+    // Your hooks should include:
+    //   all   : authenticate('jwt')
+    // !<DEFAULT> code: before
     all: [authenticate('jwt')],
     find: [],
     get: [],
-    create: [semesterEndsAfterStart(), semesterDateConflicts()],
-    update: [semesterEndsAfterStart(), semesterDateConflicts()],
-    patch: [semesterEndsAfterStart(), semesterDateConflicts()],
-    remove: []
+    create: [mustEndAfterStarts(), dateConflicts()],
+    update: [mustEndAfterStarts(), dateConflicts()],
+    patch: [mustEndAfterStarts(), dateConflicts()],
+    remove: [],
+    // !end
   },
 
   after: {
+    // !<DEFAULT> code: after
     all: [],
     find: [],
     get: [],
     create: [],
     update: [],
     patch: [],
-    remove: []
+    remove: [],
+    // !end
   },
 
   error: {
+    // !<DEFAULT> code: error
     all: [],
     find: [],
     get: [],
     create: [],
     update: [],
     patch: [],
-    remove: []
-  }
+    remove: [],
+    // !end
+  },
+  // !code: moduleExports // !end
 }
+
+// !code: exports // !end
+module.exports = moduleExports
+
+// !code: funcs // !end
+// !code: end // !end

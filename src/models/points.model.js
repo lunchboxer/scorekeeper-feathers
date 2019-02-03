@@ -1,21 +1,32 @@
-// points-model.js - A mongoose model
+
+// points-model.js - A Mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
-module.exports = function (app) {
-  const mongooseClient = app.get('mongooseClient')
-  const { Schema } = mongooseClient
-  const ObjectId = Schema.Types.ObjectId
-  const points = new Schema(
-    {
-      value: { type: Number, required: true },
-      student: { type: ObjectId, required: true, ref: 'students' },
-      session: { type: ObjectId, required: true, ref: 'classSessions' }
-    },
-    {
-      timestamps: true
-    }
-  )
+// !<DEFAULT> code: mongoose_schema
+const mongooseSchema = require('../services/points/points.mongoose')
+// !end
+// !code: mongoose_imports // !end
+// !code: mongoose_init // !end
 
-  return mongooseClient.model('points', points)
+let moduleExports = function (app) {
+  let mongooseClient = app.get('mongooseClient')
+  // !code: mongoose_func_init // !end
+
+  // !<DEFAULT> code: mongoose_client
+  const points = new mongooseClient.Schema(mongooseSchema, { timestamps: true })
+  // !end
+
+  let existingModel = mongooseClient.models['points'] // needed for client/server tests
+  let returns = existingModel || mongooseClient.model('points', points)
+
+  // !code: mongoose_func_return // !end
+  return returns
 }
+// !code: mongoose_more // !end
+
+// !code: mongoose_exports // !end
+module.exports = moduleExports
+
+// !code: mongoose_funcs // !end
+// !code: mongoose_end // !end
