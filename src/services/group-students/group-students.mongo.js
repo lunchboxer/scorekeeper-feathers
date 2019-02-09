@@ -15,9 +15,15 @@ let moduleExports = merge({},
         bsonType: "objectId"
       },
       studentId: {
+        faker: {
+          fk: "students:next"
+        },
         bsonType: "objectId"
       },
       groupId: {
+        faker: {
+          fk: "groups:next"
+        },
         bsonType: "objectId"
       }
     },

@@ -1,3 +1,4 @@
+
 // Hooks for service `messages`. (Can be re-generated.)
 const commonHooks = require('feathers-hooks-common')
 const { authenticate } = require('@feathersjs/authentication').hooks
@@ -5,20 +6,15 @@ const { authenticate } = require('@feathersjs/authentication').hooks
 const addTimestamp = require('./hooks/add-timestamp')
 // eslint-disable-next-line no-unused-vars
 const limitEntries = require('./hooks/limit-entries')
-// !code: imports // !end
+// !code: imports
+/* eslint-disable no-unused-vars */
+// !end
 
 // !<DEFAULT> code: used
 // eslint-disable-next-line no-unused-vars
 const { iff } = commonHooks
 // eslint-disable-next-line no-unused-vars
-const {
-  create,
-  update,
-  patch,
-  validateCreate,
-  validateUpdate,
-  validatePatch,
-} = require('./messages.validate')
+const { create, update, patch, validateCreate, validateUpdate, validatePatch } = require('./messages.validate')
 // !end
 
 // !code: init // !end
@@ -27,7 +23,7 @@ let moduleExports = {
   before: {
     // Your hooks should include:
     //   all   : authenticate('jwt')
-    // !<DEFAULT> code: before
+    // !code: before
     all: [authenticate('jwt')],
     find: [],
     get: [],
@@ -39,7 +35,7 @@ let moduleExports = {
   },
 
   after: {
-    // !<DEFAULT> code: after
+    // !code: after
     all: [],
     find: [],
     get: [],
@@ -58,7 +54,7 @@ let moduleExports = {
     create: [],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
     // !end
   },
   // !code: moduleExports // !end

@@ -28,7 +28,8 @@ let schema = {
     chineseName: {
       minLength: 1,
       maxLength: 10,
-      pattern: '^[\u4e00-\u9fa5]+$', // ^/p{Unified_Ideograph}/u+$ is coming
+      // pattern: '/^\p{Unified_Ideograph}+$/u', // eslint-disable-line no-useless-escape
+      pattern: '^[\u4e00-\u9fa5]+$',
     },
     pinyinName: {},
     englishName: { minLength: 2, maxLength: 30, faker: 'name.firstName' },

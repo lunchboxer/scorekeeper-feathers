@@ -1,7 +1,7 @@
+const errors = require('@feathersjs/errors')
+
 module.exports = function () {
   return context => {
-    throw new Error(
-      `'${context.path}' service ${context.method} method is disabled.`
-    )
+    throw new errors.MethodNotAllowed('Method not allowed')
   }
 }

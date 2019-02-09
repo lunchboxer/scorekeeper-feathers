@@ -1,7 +1,8 @@
-/* eslin-disable no-unused-vars */
 // Hooks for service `groups`. (Can be re-generated.)
 const commonHooks = require('feathers-hooks-common')
 const { authenticate } = require('@feathersjs/authentication').hooks
+// eslint-disable-next-line no-unused-vars
+const populateStudents = require('./hooks/populate-students')
 // !code: imports
 const cleanUpM2MRelations = require('../../hooks/clean-up-m2mrelations')
 // !end
@@ -9,7 +10,7 @@ const cleanUpM2MRelations = require('../../hooks/clean-up-m2mrelations')
 // !<DEFAULT> code: used
 // eslint-disable-next-line no-unused-vars
 const { iff } = commonHooks
-
+// eslint-disable-next-line no-unused-vars
 const {
   create,
   update,
@@ -38,10 +39,10 @@ let moduleExports = {
   },
 
   after: {
-    // !<DEFAULT> code: after
+    // !code: after
     all: [],
-    find: [],
-    get: [],
+    find: [populateStudents()],
+    get: [populateStudents()],
     create: [],
     update: [],
     patch: [],

@@ -7,11 +7,16 @@
     "max": 500
   },
   "tests": {
-    "environmentsAllowingSeedData": ["development"]
+    "environmentsAllowingSeedData": [
+      "development"
+    ]
   },
   "authentication": {
     "secret": "444eea3355af92cf7834be14c6d2d970127dbc41fd6d845215563ff8c99a55d4f35f2efe21eabd148315ecdad9b818ad17db9b8648d305794b5b570a1917199af3eaa149ea8ae115b587f0fcba97d1da5a6f10bc266fa076b1c06e6779ba33a4688b6653d759100490b61a2a3145e90f5dd3cda2a43c5557cc25d176cb500da789faa1ec0875c9a1ce3a50205d703da661722013e7ede68630efdefc16e6d6c55a189ddfee1a63ab0007c1a156519dfa231b3a8722d9706b525db88d3345425dbdc1c9b297d290468280c6784fea04d30b1f0712841ac85138538830dfdf2c8acf61d680bcc8312d53e836a46b7605c1e015dd74340ae265ad1e657c23100ea9",
-    "strategies": ["jwt", "local"],
+    "strategies": [
+      "jwt",
+      "local"
+    ],
     "path": "/authentication",
     "service": "users",
     "jwt": {

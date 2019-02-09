@@ -12,9 +12,10 @@ let moduleExports = function (app) {
 
   let options = {
     Model,
-    multi: true,
     paginate,
-    // !code: options_more // !end
+    // !code: options_more
+    multi: true,
+    // !end
   }
   // !code: options_change // !end
 

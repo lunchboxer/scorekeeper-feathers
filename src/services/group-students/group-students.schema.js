@@ -1,3 +1,4 @@
+
 // Define the Feathers schema for service `groupStudents`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
@@ -6,9 +7,11 @@
 let schema = {
   // !<DEFAULT> code: schema_header
   title: 'GroupStudents',
-  description: 'Intermediary joining students and groups',
+  description: 'GroupStudents database.',
   // !end
-  // !code: schema_definitions // !end
+  // !code: schema_definitions
+  fakeRecords: 8,
+  // !end
 
   // Required fields.
   required: [
@@ -25,8 +28,8 @@ let schema = {
   // Fields in the model.
   properties: {
     // !code: schema_properties
-    studentId: { type: 'ID' },
-    groupId: { type: 'ID' },
+    studentId: { type: 'ID', faker: { fk: 'students:next' } },
+    groupId: { type: 'ID', faker: { fk: 'groups:next' } },
     // !end
   },
   // !code: schema_more // !end

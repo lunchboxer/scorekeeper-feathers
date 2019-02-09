@@ -17,6 +17,7 @@ let base = merge({},
   {
     title: "GroupStudents",
     description: "GroupStudents database.",
+    fakeRecords: 8,
     required: [
       "studentId",
       "groupId"
@@ -24,10 +25,16 @@ let base = merge({},
     uniqueItemProperties: [],
     properties: {
       studentId: {
-        type: ID
+        type: ID,
+        faker: {
+          fk: "students:next"
+        }
       },
       groupId: {
-        type: ID
+        type: ID,
+        faker: {
+          fk: "groups:next"
+        }
       }
     }
   },

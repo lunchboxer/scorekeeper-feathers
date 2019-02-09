@@ -1,7 +1,9 @@
+
 // Hooks for service `students`. (Can be re-generated.)
 const commonHooks = require('feathers-hooks-common')
 const { authenticate } = require('@feathersjs/authentication').hooks
 // !code: imports
+/* eslint-disable no-unused-vars */
 const notSuperOldOrUnborn = require('./hooks/not-super-old-or-unborn')
 const autoPinyin = require('./hooks/auto-pinyin')
 const cleanUpM2MRelations = require('../../hooks/clean-up-m2mrelations')
@@ -11,14 +13,7 @@ const cleanUpM2MRelations = require('../../hooks/clean-up-m2mrelations')
 // eslint-disable-next-line no-unused-vars
 const { iff } = commonHooks
 // eslint-disable-next-line no-unused-vars
-const {
-  create,
-  update,
-  patch,
-  validateCreate,
-  validateUpdate,
-  validatePatch,
-} = require('./students.validate')
+const { create, update, patch, validateCreate, validateUpdate, validatePatch } = require('./students.validate')
 // !end
 
 // !code: init // !end
@@ -27,11 +22,11 @@ let moduleExports = {
   before: {
     // Your hooks should include:
     //   all   : authenticate('jwt')
-    // !<DEFAULT> code: before
+    // !code: before
     all: [authenticate('jwt')],
     find: [],
     get: [],
-    create: [notSuperOldOrUnborn(), autoPinyin()],
+    create: [validateCreate(), notSuperOldOrUnborn(), autoPinyin()],
     update: [notSuperOldOrUnborn(), autoPinyin()],
     patch: [notSuperOldOrUnborn(), autoPinyin()],
     remove: [],
@@ -39,7 +34,7 @@ let moduleExports = {
   },
 
   after: {
-    // !<DEFAULT> code: after
+    // !code: after
     all: [],
     find: [],
     get: [],
@@ -58,7 +53,7 @@ let moduleExports = {
     create: [],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
     // !end
   },
   // !code: moduleExports // !end

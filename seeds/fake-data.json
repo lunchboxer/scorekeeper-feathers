@@ -1,371 +1,476 @@
 {
   "users": [
     {
-      "username": "Alena47",
-      "firstName": "Kenya",
-      "lastName": "Marvin",
-      "password": "$2a$13$6JXjzG2gV2HqEixPqnPKmeGZ.ExeXh/MBPAOD7FmyGNIc9PFBp5aK",
-      "roleId": "5c5558ef5409c873acc8802e",
-      "_id": "5c5558ef5409c873acc88026"
+      "username": "Emerson_Swift",
+      "firstName": "Willow",
+      "lastName": "Vandervort",
+      "password": "$2a$13$lgw/FY9UXC3Lzqa1nfLm9exBmaeEug4qnY4MD/W7bJl0AE27Ea.Wu",
+      "roleId": "5c5e4f6701ab734d27370740",
+      "_id": "5c5e4f6701ab734d2737073c"
     },
     {
-      "username": "Kenneth_Von",
-      "firstName": "Lonny",
-      "lastName": "Hudson",
-      "password": "$2a$13$wcwCUlUUxi9.Lj90jP4hZesFNRZnhbHN7FW/qq/ojVSwgNpJhd6V.",
-      "roleId": "5c5558ef5409c873acc8802b",
-      "_id": "5c5558ef5409c873acc88027"
+      "username": "Lauriane68",
+      "firstName": "Brayan",
+      "lastName": "Huel",
+      "password": "$2a$13$Oc1sMQUhqeoseVUIDAtETeThLP7ualOVJhJ7ZR248PdjFYMtMHK36",
+      "roleId": "5c5e4f6701ab734d27370740",
+      "_id": "5c5e4f6701ab734d2737073d"
     },
     {
-      "username": "Felipa80",
-      "firstName": "Lolita",
-      "lastName": "Champlin",
-      "password": "$2a$13$WviHKmCR9RVOIn9IJfCAuuHKzzmz8ssu.KOKqPqvxYeg6d7uz22ym",
-      "roleId": "5c5558ef5409c873acc8802e",
-      "_id": "5c5558ef5409c873acc88028"
+      "username": "Verda_Ferry40",
+      "firstName": "Jaylin",
+      "lastName": "Donnelly",
+      "password": "$2a$13$84m1v4o4yIGQDx3t9drCm.tUFFHaqc1x7XnN.r2aceGYQkRpWpuZu",
+      "roleId": "5c5e4f6701ab734d27370744",
+      "_id": "5c5e4f6701ab734d2737073e"
     },
     {
-      "username": "Ruthie56",
-      "firstName": "Norberto",
-      "lastName": "Bernhard",
-      "password": "$2a$13$W6Sp1iA5GNVaNGqYyq5vzuCwR3KC1.9s1LYBpHCQ87v/Uvr.JVX.u",
-      "roleId": "5c5558ef5409c873acc8802c",
-      "_id": "5c5558ef5409c873acc88029"
+      "username": "Kristofer.Dicki94",
+      "firstName": "Hillary",
+      "lastName": "Romaguera",
+      "password": "$2a$13$ziyuGHGwubGNr3.nYHnEAeapH8Z7JAuwma4BuKcsX22DM3ijUFYlO",
+      "roleId": "5c5e4f6701ab734d27370740",
+      "_id": "5c5e4f6701ab734d2737073f"
     }
   ],
   "roles": [
     {
-      "name": "do ut",
-      "_id": "5c5558ef5409c873acc8802a"
+      "name": "ullamco ut",
+      "_id": "5c5e4f6701ab734d27370740"
     },
     {
-      "name": "labore in officia",
-      "_id": "5c5558ef5409c873acc8802b"
+      "name": "cillum ipsum aliqua",
+      "_id": "5c5e4f6701ab734d27370741"
     },
     {
-      "name": "Duis ipsum in sit",
-      "_id": "5c5558ef5409c873acc8802c"
+      "name": "officia Excepteur",
+      "_id": "5c5e4f6701ab734d27370742"
     },
     {
-      "name": "dolore voluptate aliquip",
-      "_id": "5c5558ef5409c873acc8802d"
+      "name": "esse Ut irure",
+      "_id": "5c5e4f6701ab734d27370743"
     },
     {
-      "name": "consectetur esse ",
-      "_id": "5c5558ef5409c873acc8802e"
+      "name": "eu ut ut dolore",
+      "_id": "5c5e4f6701ab734d27370744"
     }
   ],
   "students": [
     {
       "chineseName": " ",
-      "pinyinName": "proident deserunt",
-      "englishName": "Janae",
-      "birthdate": "1980-11-25",
+      "pinyinName": "Ut commodo",
+      "englishName": "Jamir",
+      "birthdate": "1945-09-20",
+      "gender": "M",
+      "_id": "5c5e4f6701ab734d27370745"
+    },
+    {
+      "chineseName": " ",
+      "pinyinName": "non deserunt eu sint sit",
+      "englishName": "Cleo",
+      "birthdate": "1941-08-28",
+      "gender": "M",
+      "_id": "5c5e4f6701ab734d27370746"
+    },
+    {
+      "chineseName": " ",
+      "pinyinName": "commodo do non ex",
+      "englishName": "Vincenzo",
+      "birthdate": "1995-08-17",
       "gender": "F",
-      "groupIds": [
-        "5c5558ef5409c873acc88048"
-      ],
-      "_id": "5c5558ef5409c873acc8802f"
+      "_id": "5c5e4f6701ab734d27370747"
     },
     {
       "chineseName": " ",
-      "pinyinName": "magna in",
-      "englishName": "Bernadette",
-      "birthdate": "2009-04-05",
-      "gender": "M",
-      "groupIds": [
-        "5c5558ef5409c873acc88044"
-      ],
-      "_id": "5c5558ef5409c873acc88030"
-    },
-    {
-      "chineseName": " ",
-      "pinyinName": "nulla esse",
-      "englishName": "Sigrid",
-      "birthdate": "2015-07-14",
+      "pinyinName": "cupidatat aute",
+      "englishName": "Jack",
+      "birthdate": "1970-01-03",
       "gender": "F",
-      "groupIds": [
-        "5c5558ef5409c873acc88040"
-      ],
-      "_id": "5c5558ef5409c873acc88031"
+      "_id": "5c5e4f6701ab734d27370748"
     },
     {
       "chineseName": " ",
-      "pinyinName": "exercitation ut reprehenderit irure",
-      "englishName": "Sofia",
-      "birthdate": "1971-03-05",
-      "gender": "M",
-      "groupIds": [
-        "5c5558ef5409c873acc88046"
-      ],
-      "_id": "5c5558ef5409c873acc88032"
-    },
-    {
-      "chineseName": " ",
-      "pinyinName": "est Lorem aute",
-      "englishName": "Virgil",
-      "birthdate": "1939-08-07",
-      "gender": "M",
-      "groupIds": [
-        "5c5558ef5409c873acc88045"
-      ],
-      "_id": "5c5558ef5409c873acc88033"
-    },
-    {
-      "chineseName": " ",
-      "pinyinName": "dolor in m",
-      "englishName": "Judson",
-      "birthdate": "1999-04-12",
+      "pinyinName": "ad magna in occaecat",
+      "englishName": "Heber",
+      "birthdate": "1947-02-28",
       "gender": "F",
-      "groupIds": [
-        "5c5558ef5409c873acc88042"
-      ],
-      "_id": "5c5558ef5409c873acc88034"
+      "_id": "5c5e4f6701ab734d27370749"
     },
     {
       "chineseName": " ",
-      "pinyinName": "est aliqua",
-      "englishName": "Skylar",
-      "birthdate": "2009-06-12",
-      "gender": "M",
-      "groupIds": [
-        "5c5558ef5409c873acc88046"
-      ],
-      "_id": "5c5558ef5409c873acc88035"
-    },
-    {
-      "chineseName": " ",
-      "pinyinName": "ut minim velit",
-      "englishName": "Julia",
-      "birthdate": "1988-07-15",
+      "pinyinName": "cillum cupidat",
+      "englishName": "Rose",
+      "birthdate": "2000-02-05",
       "gender": "F",
-      "groupIds": [
-        "5c5558ef5409c873acc88040"
-      ],
-      "_id": "5c5558ef5409c873acc88036"
+      "_id": "5c5e4f6701ab734d2737074a"
     },
     {
       "chineseName": " ",
-      "pinyinName": "amet pariatur ea mollit",
-      "englishName": "Hassie",
-      "birthdate": "1976-08-11",
+      "pinyinName": "est occaecat laborum proident amet",
+      "englishName": "Otha",
+      "birthdate": "2017-08-20",
       "gender": "M",
-      "groupIds": [
-        "5c5558ef5409c873acc8803e"
-      ],
-      "_id": "5c5558ef5409c873acc88037"
+      "_id": "5c5e4f6701ab734d2737074b"
     },
     {
       "chineseName": " ",
-      "pinyinName": "laborum",
-      "englishName": "Hayley",
-      "birthdate": "1977-01-14",
+      "pinyinName": "ex id",
+      "englishName": "Esperanza",
+      "birthdate": "2006-05-17",
       "gender": "M",
-      "groupIds": [
-        "5c5558ef5409c873acc8804a"
-      ],
-      "_id": "5c5558ef5409c873acc88038"
+      "_id": "5c5e4f6701ab734d2737074c"
     },
     {
       "chineseName": " ",
-      "pinyinName": "exercitation",
-      "englishName": "Kiara",
-      "birthdate": "1998-10-15",
+      "pinyinName": "proident velit",
+      "englishName": "Sim",
+      "birthdate": "1955-04-19",
       "gender": "M",
-      "groupIds": [
-        "5c5558ef5409c873acc88048"
-      ],
-      "_id": "5c5558ef5409c873acc88039"
+      "_id": "5c5e4f6701ab734d2737074d"
     },
     {
       "chineseName": " ",
-      "pinyinName": "non occaecat anim",
-      "englishName": "Kasandra",
-      "birthdate": "1942-12-27",
+      "pinyinName": "incididunt qui",
+      "englishName": "Winston",
+      "birthdate": "1990-07-05",
+      "gender": "M",
+      "_id": "5c5e4f6701ab734d2737074e"
+    },
+    {
+      "chineseName": " ",
+      "pinyinName": "aliquip elit in",
+      "englishName": "Maryam",
+      "birthdate": "1957-01-04",
+      "gender": "M",
+      "_id": "5c5e4f6701ab734d2737074f"
+    },
+    {
+      "chineseName": " ",
+      "pinyinName": "occaecat incididunt Excepteur",
+      "englishName": "Connie",
+      "birthdate": "1987-06-29",
       "gender": "F",
-      "groupIds": [
-        "5c5558ef5409c873acc88046"
-      ],
-      "_id": "5c5558ef5409c873acc8803a"
+      "_id": "5c5e4f6701ab734d27370750"
     },
     {
       "chineseName": " ",
-      "pinyinName": "aliquip ",
-      "englishName": "Chad",
-      "birthdate": "1976-11-04",
-      "gender": "M",
-      "groupIds": [
-        "5c5558ef5409c873acc88042"
-      ],
-      "_id": "5c5558ef5409c873acc8803b"
+      "pinyinName": "ad consequat",
+      "englishName": "Torrey",
+      "birthdate": "1959-05-08",
+      "gender": "F",
+      "_id": "5c5e4f6701ab734d27370751"
     },
     {
       "chineseName": " ",
-      "pinyinName": "in",
-      "englishName": "Theodora",
-      "birthdate": "2000-07-23",
-      "gender": "M",
-      "groupIds": [
-        "5c5558ef5409c873acc8803f"
-      ],
-      "_id": "5c5558ef5409c873acc8803c"
+      "pinyinName": "velit nulla commodo",
+      "englishName": "Percival",
+      "birthdate": "2008-11-29",
+      "gender": "F",
+      "_id": "5c5e4f6701ab734d27370752"
     },
     {
       "chineseName": " ",
-      "pinyinName": "quis sed in magna laborum",
-      "englishName": "Darron",
-      "birthdate": "2006-11-09",
-      "gender": "M",
-      "groupIds": [
-        "5c5558ef5409c873acc88046"
-      ],
-      "_id": "5c5558ef5409c873acc8803d"
+      "pinyinName": "ad",
+      "englishName": "Ellsworth",
+      "birthdate": "1955-05-16",
+      "gender": "F",
+      "_id": "5c5e4f6701ab734d27370753"
     }
   ],
   "groups": [
     {
-      "name": "in irure eni",
-      "semesterId": "5c5558ef5409c873acc8804e",
-      "_id": "5c5558ef5409c873acc8803e"
+      "name": "nulla id velit magna",
+      "semesterId": "5c5e4f6701ab734d27370764",
+      "_id": "5c5e4f6701ab734d27370754"
     },
     {
-      "name": "nulla Lorem",
-      "semesterId": "5c5558ef5409c873acc8804e",
-      "_id": "5c5558ef5409c873acc8803f"
+      "name": "ipsum mollit consect",
+      "semesterId": "5c5e4f6701ab734d27370764",
+      "_id": "5c5e4f6701ab734d27370755"
     },
     {
-      "name": "ex adipisici",
-      "semesterId": "5c5558ef5409c873acc8804d",
-      "_id": "5c5558ef5409c873acc88040"
+      "name": "in",
+      "semesterId": "5c5e4f6701ab734d27370765",
+      "_id": "5c5e4f6701ab734d27370756"
     },
     {
-      "name": "esse dolor aliqua",
-      "semesterId": "5c5558ef5409c873acc88051",
-      "_id": "5c5558ef5409c873acc88041"
+      "name": "magna irure",
+      "semesterId": "5c5e4f6701ab734d27370766",
+      "_id": "5c5e4f6701ab734d27370757"
     },
     {
-      "name": "commodo",
-      "semesterId": "5c5558ef5409c873acc8804e",
-      "_id": "5c5558ef5409c873acc88042"
+      "name": "consectetur ea ",
+      "semesterId": "5c5e4f6701ab734d27370767",
+      "_id": "5c5e4f6701ab734d27370758"
+    },
+    {
+      "name": "adipisicing",
+      "semesterId": "5c5e4f6701ab734d27370766",
+      "_id": "5c5e4f6701ab734d27370759"
+    },
+    {
+      "name": "qui ad id",
+      "semesterId": "5c5e4f6701ab734d27370763",
+      "_id": "5c5e4f6701ab734d2737075a"
+    },
+    {
+      "name": "velit do exercitat",
+      "semesterId": "5c5e4f6701ab734d27370765",
+      "_id": "5c5e4f6701ab734d2737075b"
+    },
+    {
+      "name": "esse ad et ",
+      "semesterId": "5c5e4f6701ab734d27370764",
+      "_id": "5c5e4f6701ab734d2737075c"
+    },
+    {
+      "name": "Excepteur",
+      "semesterId": "5c5e4f6701ab734d27370764",
+      "_id": "5c5e4f6701ab734d2737075d"
+    },
+    {
+      "name": "adipisicing e",
+      "semesterId": "5c5e4f6701ab734d27370765",
+      "_id": "5c5e4f6701ab734d2737075e"
+    },
+    {
+      "name": "et cupidatat",
+      "semesterId": "5c5e4f6701ab734d27370764",
+      "_id": "5c5e4f6701ab734d2737075f"
+    },
+    {
+      "name": "magna d",
+      "semesterId": "5c5e4f6701ab734d27370766",
+      "_id": "5c5e4f6701ab734d27370760"
+    },
+    {
+      "name": "labore es",
+      "semesterId": "5c5e4f6701ab734d27370765",
+      "_id": "5c5e4f6701ab734d27370761"
     },
     {
       "name": "ut est",
-      "semesterId": "5c5558ef5409c873acc88050",
-      "_id": "5c5558ef5409c873acc88043"
-    },
-    {
-      "name": "eiusmod deserunt labore",
-      "semesterId": "5c5558ef5409c873acc88051",
-      "_id": "5c5558ef5409c873acc88044"
-    },
-    {
-      "name": "veniam ",
-      "semesterId": "5c5558ef5409c873acc8804d",
-      "_id": "5c5558ef5409c873acc88045"
-    },
-    {
-      "name": "magna Excepteur repr",
-      "semesterId": "5c5558ef5409c873acc8804e",
-      "_id": "5c5558ef5409c873acc88046"
-    },
-    {
-      "name": "irure dolore ",
-      "semesterId": "5c5558ef5409c873acc8804e",
-      "_id": "5c5558ef5409c873acc88047"
-    },
-    {
-      "name": "elit sunt nulla",
-      "semesterId": "5c5558ef5409c873acc8804e",
-      "_id": "5c5558ef5409c873acc88048"
-    },
-    {
-      "name": "quis in deserunt",
-      "semesterId": "5c5558ef5409c873acc8804e",
-      "_id": "5c5558ef5409c873acc88049"
-    },
-    {
-      "name": "sint",
-      "semesterId": "5c5558ef5409c873acc8804e",
-      "_id": "5c5558ef5409c873acc8804a"
-    },
-    {
-      "name": "mollit sunt occaecat aut",
-      "semesterId": "5c5558ef5409c873acc8804f",
-      "_id": "5c5558ef5409c873acc8804b"
-    },
-    {
-      "name": "ad eiusmod ",
-      "semesterId": "5c5558ef5409c873acc8804e",
-      "_id": "5c5558ef5409c873acc8804c"
+      "semesterId": "5c5e4f6701ab734d27370767",
+      "_id": "5c5e4f6701ab734d27370762"
     }
   ],
   "semesters": [
     {
-      "name": "reprehenderit est cillum",
-      "startDate": "1949-06-27",
-      "endDate": "1957-04-23",
-      "_id": "5c5558ef5409c873acc8804d"
+      "name": "consectetur laboris",
+      "startDate": "1949-05-28",
+      "endDate": "1979-07-13",
+      "_id": "5c5e4f6701ab734d27370763"
     },
     {
-      "name": "cillum nulla in",
-      "startDate": "1955-05-30",
-      "endDate": "1970-07-03",
-      "_id": "5c5558ef5409c873acc8804e"
+      "name": "labor",
+      "startDate": "1978-08-25",
+      "endDate": "1951-01-14",
+      "_id": "5c5e4f6701ab734d27370764"
     },
     {
-      "name": "nisi Excepteur est",
-      "startDate": "1994-02-07",
-      "endDate": "2008-10-09",
-      "_id": "5c5558ef5409c873acc8804f"
+      "name": "ipsum non",
+      "startDate": "1973-04-18",
+      "endDate": "1968-05-06",
+      "_id": "5c5e4f6701ab734d27370765"
     },
     {
-      "name": "exercitation ea dolor",
-      "startDate": "1962-05-24",
-      "endDate": "1942-07-03",
-      "_id": "5c5558ef5409c873acc88050"
+      "name": "id mollit esse",
+      "startDate": "1974-11-24",
+      "endDate": "1981-09-08",
+      "_id": "5c5e4f6701ab734d27370766"
     },
     {
-      "name": "dolor sit amet velit",
-      "startDate": "2002-08-11",
-      "endDate": "1949-11-18",
-      "_id": "5c5558ef5409c873acc88051"
+      "name": "quis ea",
+      "startDate": "1964-03-23",
+      "endDate": "1967-09-24",
+      "_id": "5c5e4f6701ab734d27370767"
     }
   ],
   "attendances": [
     {
-      "status": "Active",
-      "studentId": "sed Ut",
-      "sessionId": "non labori",
-      "arrivedAt": "1991-12-14T10:45:02.761Z",
-      "_id": "5c5558ef5409c873acc88052"
+      "status": "present",
+      "studentId": "nisi consectetur laborum culpa anim",
+      "sessionId": "minim non ut",
+      "arrivedAt": "1992-10-02T05:27:59.647Z",
+      "_id": "5c5e4f6701ab734d27370768"
     },
     {
-      "status": "Inactive",
-      "studentId": "proident aliquip eiusmod in",
-      "sessionId": "commodo",
-      "arrivedAt": "1980-05-31T04:03:58.092Z",
-      "_id": "5c5558ef5409c873acc88053"
+      "status": "leftEarly",
+      "studentId": "in mollit quis non",
+      "sessionId": "enim commodo occaecat voluptat",
+      "arrivedAt": "1992-07-12T15:08:24.207Z",
+      "_id": "5c5e4f6701ab734d27370769"
     },
     {
-      "status": "Inactive",
-      "studentId": "mollit",
-      "sessionId": "ipsum",
-      "arrivedAt": "1975-09-27T12:44:17.988Z",
-      "_id": "5c5558ef5409c873acc88054"
+      "status": "leftEarly",
+      "studentId": "Excepteur",
+      "sessionId": "sunt qui",
+      "arrivedAt": "1988-05-17T02:26:52.301Z",
+      "_id": "5c5e4f6701ab734d2737076a"
     },
     {
-      "status": "Inactive",
-      "studentId": "officia reprehenderit",
-      "sessionId": "ullamco",
-      "arrivedAt": "1990-09-15T19:48:52.457Z",
-      "_id": "5c5558ef5409c873acc88055"
+      "status": "absent",
+      "studentId": "aliquip minim o",
+      "sessionId": "adipisicing consectetur aliquip sit",
+      "arrivedAt": "1982-12-30T14:44:15.360Z",
+      "_id": "5c5e4f6701ab734d2737076b"
     },
     {
-      "status": "Inactive",
-      "studentId": "ipsum irure id eiusmod",
-      "sessionId": "minim",
-      "arrivedAt": "1987-12-31T09:50:16.261Z",
-      "_id": "5c5558ef5409c873acc88056"
+      "status": "lateLeftEarly",
+      "studentId": "esse conse",
+      "sessionId": "do",
+      "arrivedAt": "1997-09-20T00:35:12.264Z",
+      "_id": "5c5e4f6701ab734d2737076c"
+    }
+  ],
+  "sessions": [
+    {
+      "stage": "Inactive",
+      "startsAt": "1989-03-14T04:22:52.972Z",
+      "endsAt": "1951-04-08T13:26:34.652Z",
+      "groupId": "est et",
+      "_id": "5c5e4f6701ab734d2737076d"
+    },
+    {
+      "stage": "Active",
+      "startsAt": "1985-06-17T08:20:00.428Z",
+      "endsAt": "1959-11-24T04:25:38.158Z",
+      "groupId": "minim",
+      "_id": "5c5e4f6701ab734d2737076e"
+    },
+    {
+      "stage": "Ended",
+      "startsAt": "1988-03-08T18:39:47.571Z",
+      "endsAt": "1991-11-11T15:46:50.139Z",
+      "groupId": "nisi mollit ex Ut",
+      "_id": "5c5e4f6701ab734d2737076f"
+    },
+    {
+      "stage": "Ended",
+      "startsAt": "1969-01-29T01:34:56.634Z",
+      "endsAt": "2013-11-12T19:52:28.242Z",
+      "groupId": "anim nisi",
+      "_id": "5c5e4f6701ab734d27370770"
+    },
+    {
+      "stage": "Inactive",
+      "startsAt": "1981-03-16T03:16:46.068Z",
+      "endsAt": "1973-06-06T18:37:18.063Z",
+      "groupId": "do ut aliqua",
+      "_id": "5c5e4f6701ab734d27370771"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ],
+  "points": [
+    {
+      "value": 4,
+      "studentId": "do sit ea deserunt minim",
+      "sessionId": "Lorem ipsum elit eu cupidatat",
+      "_id": "5c5e4f6701ab734d27370772"
+    },
+    {
+      "value": 0,
+      "studentId": "velit Lorem adipisicing",
+      "sessionId": "eiusmod sunt cupidatat in",
+      "_id": "5c5e4f6701ab734d27370773"
+    },
+    {
+      "value": -4,
+      "studentId": "incididunt dolore est deserunt anim",
+      "sessionId": "Excepteur dolore do",
+      "_id": "5c5e4f6701ab734d27370774"
+    },
+    {
+      "value": 4,
+      "studentId": "ut dolor sunt",
+      "sessionId": "pariatur aliquip cupidatat",
+      "_id": "5c5e4f6701ab734d27370775"
+    },
+    {
+      "value": 1,
+      "studentId": "est sit consectetur nulla labore",
+      "sessionId": "eiusmod est non nisi labore",
+      "_id": "5c5e4f6701ab734d27370776"
+    }
+  ],
+  "viewers": [
+    {
+      "name": "labore",
+      "_id": "5c5e4f6701ab734d27370777"
+    },
+    {
+      "name": "officia dolor occaecat",
+      "_id": "5c5e4f6701ab734d27370778"
+    },
+    {
+      "name": "Lorem ad",
+      "_id": "5c5e4f6701ab734d27370779"
+    },
+    {
+      "name": "pariatur irure",
+      "_id": "5c5e4f6701ab734d2737077a"
+    },
+    {
+      "name": "sit",
+      "_id": "5c5e4f6701ab734d2737077b"
+    }
+  ],
+  "groupStudents": [
+    {
+      "studentId": "5c5e4f6701ab734d2737074e",
+      "groupId": "5c5e4f6701ab734d2737075f",
+      "_id": "5c5e4f6701ab734d2737077c"
+    },
+    {
+      "studentId": "5c5e4f6701ab734d2737074e",
+      "groupId": "5c5e4f6701ab734d27370756",
+      "_id": "5c5e4f6701ab734d2737077d"
+    },
+    {
+      "studentId": "5c5e4f6701ab734d27370745",
+      "groupId": "5c5e4f6701ab734d27370754",
+      "_id": "5c5e4f6701ab734d2737077e"
+    },
+    {
+      "studentId": "5c5e4f6701ab734d27370751",
+      "groupId": "5c5e4f6701ab734d2737075b",
+      "_id": "5c5e4f6701ab734d2737077f"
+    },
+    {
+      "studentId": "5c5e4f6701ab734d2737074d",
+      "groupId": "5c5e4f6701ab734d27370757",
+      "_id": "5c5e4f6701ab734d27370780"
+    },
+    {
+      "studentId": "5c5e4f6701ab734d2737074e",
+      "groupId": "5c5e4f6701ab734d27370756",
+      "_id": "5c5e4f6701ab734d27370781"
+    },
+    {
+      "studentId": "5c5e4f6701ab734d2737074c",
+      "groupId": "5c5e4f6701ab734d2737075b",
+      "_id": "5c5e4f6701ab734d27370782"
+    },
+    {
+      "studentId": "5c5e4f6701ab734d2737074f",
+      "groupId": "5c5e4f6701ab734d27370759",
+      "_id": "5c5e4f6701ab734d27370783"
     }
   ]
 }

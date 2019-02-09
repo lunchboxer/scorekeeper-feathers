@@ -178,6 +178,13 @@
       "ifMulti": "n",
       "multiServices": [],
       "singleService": "groupStudents"
+    },
+    "populate-students": {
+      "fileName": "populate-students",
+      "camelName": "populateStudents",
+      "ifMulti": "n",
+      "multiServices": [],
+      "singleService": "groups"
     }
   },
   "authentication": {

@@ -1,3 +1,4 @@
+
 // Hooks for service `groupStudents`. (Can be re-generated.)
 const commonHooks = require('feathers-hooks-common')
 const { authenticate } = require('@feathersjs/authentication').hooks
@@ -7,20 +8,15 @@ const disallowMethod = require('../../hooks/disallow-method')
 const noDuplicatePairs = require('./hooks/no-duplicate-pairs')
 // eslint-disable-next-line no-unused-vars
 const oneGroupPerStudentPerSemester = require('./hooks/one-group-per-student-per-semester')
-// !code: imports // !end
+// !code: imports
+/* eslint-disable no-unused-vars */
+// !end
 
 // !<DEFAULT> code: used
 // eslint-disable-next-line no-unused-vars
 const { iff } = commonHooks
 // eslint-disable-next-line no-unused-vars
-const {
-  create,
-  update,
-  patch,
-  validateCreate,
-  validateUpdate,
-  validatePatch,
-} = require('./group-students.validate')
+const { create, update, patch, validateCreate, validateUpdate, validatePatch } = require('./group-students.validate')
 // !end
 
 // !code: init // !end
@@ -29,7 +25,7 @@ let moduleExports = {
   before: {
     // Your hooks should include:
     //   all   : authenticate('jwt')
-    // !<DEFAULT> code: before
+    // !code: before
     all: [authenticate('jwt')],
     find: [],
     get: [],
@@ -38,8 +34,8 @@ let moduleExports = {
       noDuplicatePairs(),
       oneGroupPerStudentPerSemester(),
     ],
-    update: [],
-    patch: [],
+    update: [disallowMethod()],
+    patch: [disallowMethod()],
     remove: [],
     // !end
   },
@@ -52,7 +48,7 @@ let moduleExports = {
     create: [],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
     // !end
   },
 
@@ -64,7 +60,7 @@ let moduleExports = {
     create: [],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
     // !end
   },
   // !code: moduleExports // !end

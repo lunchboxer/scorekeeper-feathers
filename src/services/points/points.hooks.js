@@ -1,7 +1,9 @@
+
 // Hooks for service `points`. (Can be re-generated.)
 const commonHooks = require('feathers-hooks-common')
 const { authenticate } = require('@feathersjs/authentication').hooks
 // !code: imports
+/* eslint-disable no-unused-vars */
 const disallowMethod = require('../../hooks/disallow-method')
 // !end
 
@@ -9,14 +11,7 @@ const disallowMethod = require('../../hooks/disallow-method')
 // eslint-disable-next-line no-unused-vars
 const { iff } = commonHooks
 // eslint-disable-next-line no-unused-vars
-const {
-  create,
-  update,
-  patch,
-  validateCreate,
-  validateUpdate,
-  validatePatch,
-} = require('./points.validate')
+const { create, update, patch, validateCreate, validateUpdate, validatePatch } = require('./points.validate')
 // !end
 
 // !code: init // !end
@@ -25,7 +20,7 @@ let moduleExports = {
   before: {
     // Your hooks should include:
     //   all   : authenticate('jwt')
-    // !<DEFAULT> code: before
+    // !code: before
     all: [authenticate('jwt')],
     find: [],
     get: [],
@@ -44,7 +39,7 @@ let moduleExports = {
     create: [],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
     // !end
   },
 
@@ -56,7 +51,7 @@ let moduleExports = {
     create: [],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
     // !end
   },
   // !code: moduleExports // !end
