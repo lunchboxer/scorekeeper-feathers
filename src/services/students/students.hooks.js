@@ -27,8 +27,8 @@ let moduleExports = {
     find: [],
     get: [],
     create: [validateCreate(), notSuperOldOrUnborn(), autoPinyin()],
-    update: [notSuperOldOrUnborn(), autoPinyin()],
-    patch: [notSuperOldOrUnborn(), autoPinyin()],
+    update: [validateUpdate(), notSuperOldOrUnborn(), autoPinyin()],
+    patch: [validatePatch(), notSuperOldOrUnborn(), autoPinyin()],
     remove: []
     // !end
   },
