@@ -5,8 +5,8 @@ const { authenticate } = require('@feathersjs/authentication').hooks
 // !code: imports
 /* eslint-disable no-unused-vars */
 const notSuperOldOrUnborn = require('./hooks/not-super-old-or-unborn')
-const autoPinyin = require('./hooks/auto-pinyin')
 const cleanUpM2MRelations = require('../../hooks/clean-up-m2mrelations')
+const autoPinyin = require('./hooks/auto-pinyin')
 // !end
 
 // !<DEFAULT> code: used
@@ -29,7 +29,7 @@ let moduleExports = {
     create: [validateCreate(), notSuperOldOrUnborn(), autoPinyin()],
     update: [notSuperOldOrUnborn(), autoPinyin()],
     patch: [notSuperOldOrUnborn(), autoPinyin()],
-    remove: [],
+    remove: []
     // !end
   },
 
@@ -41,7 +41,7 @@ let moduleExports = {
     create: [],
     update: [],
     patch: [],
-    remove: [cleanUpM2MRelations('group-students', 'student')],
+    remove: [cleanUpM2MRelations('group-students', 'student')]
     // !end
   },
 
@@ -55,7 +55,7 @@ let moduleExports = {
     patch: [],
     remove: []
     // !end
-  },
+  }
   // !code: moduleExports // !end
 }
 

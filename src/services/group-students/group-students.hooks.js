@@ -32,11 +32,11 @@ let moduleExports = {
     create: [
       validateCreate(),
       noDuplicatePairs(),
-      oneGroupPerStudentPerSemester(),
+      oneGroupPerStudentPerSemester()
     ],
     update: [disallowMethod()],
     patch: [disallowMethod()],
-    remove: [],
+    remove: []
     // !end
   },
 
@@ -62,7 +62,7 @@ let moduleExports = {
     patch: [],
     remove: []
     // !end
-  },
+  }
   // !code: moduleExports // !end
 }
 
