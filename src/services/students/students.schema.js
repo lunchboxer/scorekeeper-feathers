@@ -1,4 +1,3 @@
-
 // Define the Feathers schema for service `students`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
@@ -29,14 +28,17 @@ let schema = {
       minLength: 1,
       maxLength: 10,
       // pattern: '/^\p{Unified_Ideograph}+$/u', // eslint-disable-line no-useless-escape
-      pattern: '^[\u4e00-\u9fa5]+$',
+      pattern: '^[\u4e00-\u9fa5]+$'
     },
-    pinyinName: { minLength: 2, pattern: "^[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ\s']+$" },
+    pinyinName: {
+      minLength: 2,
+      pattern: '^[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜs\']+$'
+    },
     englishName: { minLength: 2, maxLength: 30, faker: 'name.firstName' },
     birthdate: { format: 'date' },
-    gender: { enum: ['F', 'M'] },
+    gender: { enum: ['F', 'M'] }
     // !end
-  },
+  }
   // !code: schema_more // !end
 }
 
@@ -47,7 +49,7 @@ let extensions = {
     // !code: graphql_header
     name: 'Student',
     service: {
-      sort: { _id: 1 },
+      sort: { _id: 1 }
     },
     // sql: {
     //   sqlTable: 'Students',
@@ -64,16 +66,16 @@ let extensions = {
       // !<DEFAULT> code: graphql_add
       // __author__: { type: '__User__!', args: false, relation: { ourTable: '__authorId__', otherTable: '_id' } },
       // !end
-    },
+    }
     // !code: graphql_more // !end
-  },
+  }
 }
 
 // !code: more // !end
 
 let moduleExports = {
   schema,
-  extensions,
+  extensions
   // !code: moduleExports // !end
 }
 

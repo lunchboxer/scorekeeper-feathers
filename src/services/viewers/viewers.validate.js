@@ -1,4 +1,3 @@
-
 /* eslint quotes: 0 */
 // Validation definitions for validateSchema hook for service `viewers`. (Can be re-generated.)
 const { validateSchema } = require('feathers-hooks-common')
@@ -12,40 +11,40 @@ const ajv = require('ajv')
 const ID = 'string'
 // !end
 
-let base = merge({},
+let base = merge(
+  {},
   // !<DEFAULT> code: base
   {
-    title: "Viewers",
-    description: "Viewers database.",
-    required: [
-      "name"
-    ],
-    uniqueItemProperties: [
-      "name"
-    ],
+    title: 'Viewers',
+    description: 'Viewers database.',
+    required: ['name'],
+    uniqueItemProperties: ['name'],
     properties: {
       name: {
-        type: "string"
+        type: 'string'
       }
     }
-  },
+  }
   // !end
   // !code: base_more // !end
 )
 // !code: base_change // !end
 
-let create = merge({},
-  base,
+let create = merge(
+  {},
+  base
   // !code: create_more // !end
 )
 
-let update = merge({},
-  base,
+let update = merge(
+  {},
+  base
   // !code: update_more // !end
 )
 
-let patch = merge({},
-  base,
+let patch = merge(
+  {},
+  base
   // !code: patch_more // !end
 )
 delete patch.required
@@ -71,9 +70,15 @@ let validatePatch = options => {
 
 let quickValidate = (method, data, options) => {
   try {
-    if (method === 'create') { validateCreate(options)({ type: 'before', method: 'create', data }) }
-    if (method === 'update') { validateCreate(options)({ type: 'before', method: 'update', data }) }
-    if (method === 'patch') { validateCreate(options)({ type: 'before', method: 'patch', data }) }
+    if (method === 'create') {
+      validateCreate(options)({ type: 'before', method: 'create', data })
+    }
+    if (method === 'update') {
+      validateCreate(options)({ type: 'before', method: 'update', data })
+    }
+    if (method === 'patch') {
+      validateCreate(options)({ type: 'before', method: 'patch', data })
+    }
   } catch (err) {
     return err
   }
@@ -87,7 +92,7 @@ let moduleExports = {
   validateCreate,
   validateUpdate,
   validatePatch,
-  quickValidate,
+  quickValidate
   // !code: moduleExports // !end
 }
 

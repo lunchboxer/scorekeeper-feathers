@@ -1,4 +1,3 @@
-
 // Define the Feathers schema for service `groupStudents`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
@@ -17,7 +16,7 @@ let schema = {
   required: [
     // !code: schema_required
     'studentId',
-    'groupId',
+    'groupId'
     // !end
   ],
   // Fields with unique values.
@@ -29,9 +28,9 @@ let schema = {
   properties: {
     // !code: schema_properties
     studentId: { type: 'ID', faker: { fk: 'students:next' } },
-    groupId: { type: 'ID', faker: { fk: 'groups:next' } },
+    groupId: { type: 'ID', faker: { fk: 'groups:next' } }
     // !end
-  },
+  }
   // !code: schema_more // !end
 }
 
@@ -42,7 +41,7 @@ let extensions = {
     // !code: graphql_header
     name: 'GroupStudent',
     service: {
-      sort: { _id: 1 },
+      sort: { _id: 1 }
     },
     // sql: {
     //   sqlTable: 'GroupStudents',
@@ -59,16 +58,16 @@ let extensions = {
       // !<DEFAULT> code: graphql_add
       // __author__: { type: '__User__!', args: false, relation: { ourTable: '__authorId__', otherTable: '_id' } },
       // !end
-    },
+    }
     // !code: graphql_more // !end
-  },
+  }
 }
 
 // !code: more // !end
 
 let moduleExports = {
   schema,
-  extensions,
+  extensions
   // !code: moduleExports // !end
 }
 

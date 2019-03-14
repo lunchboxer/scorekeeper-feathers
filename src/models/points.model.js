@@ -1,4 +1,3 @@
-
 // points-model.js - A Mongoose model
 //
 // See http://mongoosejs.com/docs/models.html

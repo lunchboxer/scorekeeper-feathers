@@ -1,4 +1,3 @@
-
 // Define the Feathers schema for service `attendances`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
@@ -16,7 +15,7 @@ let schema = {
     // !code: schema_required
     'status',
     'studentId',
-    'sessionId',
+    'sessionId'
     // !end
   ],
   // Fields with unique values.
@@ -28,13 +27,13 @@ let schema = {
   properties: {
     // !code: schema_properties
     status: {
-      enum: ['leftEarly', 'present', 'late', 'absent', 'lateLeftEarly'],
+      enum: ['leftEarly', 'present', 'late', 'absent', 'lateLeftEarly']
     },
     arrivedAt: { format: 'date-time' },
     studentId: { type: 'ID' },
-    sessionId: { type: 'ID' },
+    sessionId: { type: 'ID' }
     // !end
-  },
+  }
   // !code: schema_more // !end
 }
 
@@ -45,7 +44,7 @@ let extensions = {
     // !code: graphql_header
     name: 'Attendance',
     service: {
-      sort: { createdAt: -1 },
+      sort: { createdAt: -1 }
     },
     // sql: {
     //   sqlTable: 'Attendances',
@@ -62,16 +61,16 @@ let extensions = {
       // !<DEFAULT> code: graphql_add
       // __author__: { type: '__User__!', args: false, relation: { ourTable: '__authorId__', otherTable: '_id' } },
       // !end
-    },
+    }
     // !code: graphql_more // !end
-  },
+  }
 }
 
 // !code: more // !end
 
 let moduleExports = {
   schema,
-  extensions,
+  extensions
   // !code: moduleExports // !end
 }
 

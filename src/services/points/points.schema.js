@@ -1,4 +1,3 @@
-
 // Define the Feathers schema for service `points`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
@@ -16,7 +15,7 @@ let schema = {
     // !code: schema_required
     'value',
     'studentId',
-    'sessionId',
+    'sessionId'
     // !end
   ],
   // Fields with unique values.
@@ -29,9 +28,9 @@ let schema = {
     // !code: schema_properties
     value: { type: 'integer', minimum: -5, maximum: 5 },
     studentId: { type: 'ID' },
-    sessionId: { type: 'ID' },
+    sessionId: { type: 'ID' }
     // !end
-  },
+  }
   // !code: schema_more // !end
 }
 
@@ -42,7 +41,7 @@ let extensions = {
     // !code: graphql_header
     name: 'Point',
     service: {
-      sort: { _id: 1 },
+      sort: { _id: 1 }
     },
     // sql: {
     //   sqlTable: 'Points',
@@ -59,16 +58,16 @@ let extensions = {
       // !<DEFAULT> code: graphql_add
       // __author__: { type: '__User__!', args: false, relation: { ourTable: '__authorId__', otherTable: '_id' } },
       // !end
-    },
+    }
     // !code: graphql_more // !end
-  },
+  }
 }
 
 // !code: more // !end
 
 let moduleExports = {
   schema,
-  extensions,
+  extensions
   // !code: moduleExports // !end
 }
 

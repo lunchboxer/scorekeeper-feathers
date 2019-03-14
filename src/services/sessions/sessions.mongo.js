@@ -1,48 +1,38 @@
-
 /* eslint quotes: 0 */
 // Defines the MongoDB $jsonSchema for service `sessions`. (Can be re-generated.)
 const merge = require('lodash.merge')
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+let moduleExports = merge(
+  {},
   // !<DEFAULT> code: model
   {
-    bsonType: "object",
+    bsonType: 'object',
     additionalProperties: false,
     properties: {
       _id: {
-        bsonType: "objectId"
+        bsonType: 'objectId'
       },
       stage: {
-        enum: [
-          "Inactive",
-          "Active",
-          "Started",
-          "Ended"
-        ],
-        default: "Inactive",
-        bsonType: "string"
+        enum: ['Inactive', 'Active', 'Started', 'Ended'],
+        default: 'Inactive',
+        bsonType: 'string'
       },
       startsAt: {
-        format: "date-time",
-        bsonType: "string"
+        format: 'date-time',
+        bsonType: 'string'
       },
       endsAt: {
-        format: "date-time",
-        bsonType: "string"
+        format: 'date-time',
+        bsonType: 'string'
       },
       groupId: {
-        bsonType: "objectId"
+        bsonType: 'objectId'
       }
     },
-    required: [
-      "stage",
-      "startsAt",
-      "endsAt",
-      "groupId"
-    ]
-  },
+    required: ['stage', 'startsAt', 'endsAt', 'groupId']
+  }
   // !end
   // !code: moduleExports // !end
 )

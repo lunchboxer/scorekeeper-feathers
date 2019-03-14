@@ -1,4 +1,3 @@
-
 /* eslint quotes: 0 */
 // Defines Sequelize model for service `sessions`. (Can be re-generated.)
 const merge = require('lodash.merge')
@@ -8,13 +7,14 @@ const DataTypes = Sequelize.DataTypes
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+let moduleExports = merge(
+  {},
   // !<DEFAULT> code: sequelize_model
   {
     stage: {
-      type: Sequelize.ENUM(["Inactive","Active","Started","Ended"]),
+      type: Sequelize.ENUM(['Inactive', 'Active', 'Started', 'Ended']),
       allowNull: false,
-      default: "Inactive"
+      default: 'Inactive'
     },
     startsAt: {
       type: DataTypes.DATE,
@@ -28,7 +28,7 @@ let moduleExports = merge({},
       type: DataTypes.INTEGER,
       allowNull: false
     }
-  },
+  }
   // !end
   // !code: moduleExports // !end
 )

@@ -1,4 +1,3 @@
-
 // Define the Feathers schema for service `semesters`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end

@@ -7,7 +7,7 @@ module.exports = function () {
     // find an existing record with same pair
     const { studentId, groupId } = context.data
     const existingPair = await context.service.find({
-      query: { studentId, groupId },
+      query: { studentId, groupId }
     })
     if (existingPair.total > 0) {
       throw new Error('This student is already in this class.')

@@ -1,4 +1,3 @@
-
 /* eslint quotes: 0 */
 // Defines Mongoose model for service `semesters`. (Can be re-generated.)
 const merge = require('lodash.merge')
@@ -7,7 +6,8 @@ const mongoose = require('mongoose')
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+let moduleExports = merge(
+  {},
   // !<DEFAULT> code: model
   {
     name: {
@@ -22,7 +22,7 @@ let moduleExports = merge({},
       type: String,
       required: true
     }
-  },
+  }
   // !end
   // !code: moduleExports // !end
 )

@@ -1,4 +1,3 @@
-
 // students-model.js - A Mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
@@ -14,7 +13,9 @@ let moduleExports = function (app) {
   // !code: mongoose_func_init // !end
 
   // !<DEFAULT> code: mongoose_client
-  const students = new mongooseClient.Schema(mongooseSchema, { timestamps: true })
+  const students = new mongooseClient.Schema(mongooseSchema, {
+    timestamps: true
+  })
   // !end
 
   let existingModel = mongooseClient.models['students'] // needed for client/server tests

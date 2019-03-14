@@ -1,4 +1,3 @@
-
 // attendances-model.js - A Mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
@@ -14,11 +13,14 @@ let moduleExports = function (app) {
   // !code: mongoose_func_init // !end
 
   // !<DEFAULT> code: mongoose_client
-  const attendances = new mongooseClient.Schema(mongooseSchema, { timestamps: true })
+  const attendances = new mongooseClient.Schema(mongooseSchema, {
+    timestamps: true
+  })
   // !end
 
   let existingModel = mongooseClient.models['attendances'] // needed for client/server tests
-  let returns = existingModel || mongooseClient.model('attendances', attendances)
+  let returns =
+    existingModel || mongooseClient.model('attendances', attendances)
 
   // !code: mongoose_func_return // !end
   return returns

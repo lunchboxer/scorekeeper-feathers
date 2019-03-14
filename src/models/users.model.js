@@ -1,4 +1,3 @@
-
 // users-model.js - A Mongoose model for a user entity
 //
 // See http://mongoosejs.com/docs/models.html

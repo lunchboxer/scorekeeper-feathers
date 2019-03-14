@@ -1,4 +1,3 @@
-
 // groupStudents-model.js - A Mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
@@ -14,11 +13,14 @@ let moduleExports = function (app) {
   // !code: mongoose_func_init // !end
 
   // !<DEFAULT> code: mongoose_client
-  const groupStudents = new mongooseClient.Schema(mongooseSchema, { timestamps: true })
+  const groupStudents = new mongooseClient.Schema(mongooseSchema, {
+    timestamps: true
+  })
   // !end
 
   let existingModel = mongooseClient.models['groupStudents'] // needed for client/server tests
-  let returns = existingModel || mongooseClient.model('groupStudents', groupStudents)
+  let returns =
+    existingModel || mongooseClient.model('groupStudents', groupStudents)
 
   // !code: mongoose_func_return // !end
   return returns

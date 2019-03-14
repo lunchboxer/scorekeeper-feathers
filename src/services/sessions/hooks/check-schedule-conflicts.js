@@ -14,8 +14,8 @@ module.exports = function () {
           $total: 0,
           _id: { $ne: id },
           startsAt: { $lte: date },
-          endsAt: { $gte: date },
-        },
+          endsAt: { $gte: date }
+        }
       })
       return conflicts.total
     }

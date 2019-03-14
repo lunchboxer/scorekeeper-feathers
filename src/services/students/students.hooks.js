@@ -1,4 +1,3 @@
-
 // Hooks for service `students`. (Can be re-generated.)
 const commonHooks = require('feathers-hooks-common')
 const { authenticate } = require('@feathersjs/authentication').hooks
@@ -13,7 +12,14 @@ const autoPinyin = require('./hooks/auto-pinyin')
 // eslint-disable-next-line no-unused-vars
 const { iff } = commonHooks
 // eslint-disable-next-line no-unused-vars
-const { create, update, patch, validateCreate, validateUpdate, validatePatch } = require('./students.validate')
+const {
+  create,
+  update,
+  patch,
+  validateCreate,
+  validateUpdate,
+  validatePatch
+} = require('./students.validate')
 // !end
 
 // !code: init // !end

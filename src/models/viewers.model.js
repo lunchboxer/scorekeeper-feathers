@@ -1,4 +1,3 @@
-
 // viewers-model.js - A Mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
@@ -14,7 +13,9 @@ let moduleExports = function (app) {
   // !code: mongoose_func_init // !end
 
   // !<DEFAULT> code: mongoose_client
-  const viewers = new mongooseClient.Schema(mongooseSchema, { timestamps: true })
+  const viewers = new mongooseClient.Schema(mongooseSchema, {
+    timestamps: true
+  })
   // !end
 
   let existingModel = mongooseClient.models['viewers'] // needed for client/server tests

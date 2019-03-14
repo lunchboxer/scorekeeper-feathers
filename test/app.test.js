@@ -9,7 +9,7 @@ const getUrl = pathname =>
     hostname: app.get('host') || 'localhost',
     protocol: 'http',
     port,
-    pathname,
+    pathname
   })
 
 describe('Feathers application tests', () => {
@@ -41,8 +41,8 @@ describe('Feathers application tests', () => {
       return rp({
         url: getUrl('path/to/nowhere'),
         headers: {
-          Accept: 'text/html',
-        },
+          Accept: 'text/html'
+        }
       }).catch(res => {
         assert.strictEqual(res.statusCode, 404, 'unexpected statusCode')
         assert.ok(
@@ -55,7 +55,7 @@ describe('Feathers application tests', () => {
     it('shows a 404 JSON error without stack trace', () => {
       return rp({
         url: getUrl('path/to/nowhere'),
-        json: true,
+        json: true
       }).catch(res => {
         assert.strictEqual(res.statusCode, 404, 'unexpected statusCode')
         assert.strictEqual(res.error.code, 404, 'unexpected error.code')

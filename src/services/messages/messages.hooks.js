@@ -1,4 +1,3 @@
-
 // Hooks for service `messages`. (Can be re-generated.)
 const commonHooks = require('feathers-hooks-common')
 const { authenticate } = require('@feathersjs/authentication').hooks
@@ -14,7 +13,14 @@ const limitEntries = require('./hooks/limit-entries')
 // eslint-disable-next-line no-unused-vars
 const { iff } = commonHooks
 // eslint-disable-next-line no-unused-vars
-const { create, update, patch, validateCreate, validateUpdate, validatePatch } = require('./messages.validate')
+const {
+  create,
+  update,
+  patch,
+  validateCreate,
+  validateUpdate,
+  validatePatch
+} = require('./messages.validate')
 // !end
 
 // !code: init // !end
@@ -30,7 +36,7 @@ let moduleExports = {
     create: [addTimestamp()],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
     // !end
   },
 
@@ -42,7 +48,7 @@ let moduleExports = {
     create: [limitEntries()],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
     // !end
   },
 
@@ -56,7 +62,7 @@ let moduleExports = {
     patch: [],
     remove: []
     // !end
-  },
+  }
   // !code: moduleExports // !end
 }
 

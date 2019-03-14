@@ -1,46 +1,36 @@
-
 /* eslint quotes: 0 */
 // Defines the MongoDB $jsonSchema for service `attendances`. (Can be re-generated.)
 const merge = require('lodash.merge')
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+let moduleExports = merge(
+  {},
   // !<DEFAULT> code: model
   {
-    bsonType: "object",
+    bsonType: 'object',
     additionalProperties: false,
     properties: {
       _id: {
-        bsonType: "objectId"
+        bsonType: 'objectId'
       },
       status: {
-        enum: [
-          "leftEarly",
-          "present",
-          "late",
-          "absent",
-          "lateLeftEarly"
-        ],
-        bsonType: "string"
+        enum: ['leftEarly', 'present', 'late', 'absent', 'lateLeftEarly'],
+        bsonType: 'string'
       },
       arrivedAt: {
-        format: "date-time",
-        bsonType: "string"
+        format: 'date-time',
+        bsonType: 'string'
       },
       studentId: {
-        bsonType: "objectId"
+        bsonType: 'objectId'
       },
       sessionId: {
-        bsonType: "objectId"
+        bsonType: 'objectId'
       }
     },
-    required: [
-      "status",
-      "studentId",
-      "sessionId"
-    ]
-  },
+    required: ['status', 'studentId', 'sessionId']
+  }
   // !end
   // !code: moduleExports // !end
 )

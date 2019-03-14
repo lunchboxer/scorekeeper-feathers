@@ -1,36 +1,31 @@
-
 const assert = require('assert')
 const oneGroupPerStudentPerSemester = require('../../../../src/services/group-students/hooks/one-group-per-student-per-semester')
 
 describe('Test group-students/hooks/one-group-per-student-per-semester.unit.test.js', () => {
   // eslint-disable-next-line no-unused-vars
-  let contextBefore, contextAfterPaginated,
+  let contextBefore,
+    contextAfterPaginated,
     // eslint-disable-next-line no-unused-vars
-    contextAfter, contextAfterMultiple
+    contextAfter,
+    contextAfterMultiple
 
   beforeEach(() => {
     contextBefore = {
       type: 'before',
       params: { provider: 'socketio' },
-      data: {
-
-      }
+      data: {}
     }
 
     contextAfter = {
       type: 'after',
       params: { provider: 'socketio' },
-      result: {
-
-      }
+      result: {}
     }
 
     contextAfterMultiple = {
       type: 'after',
       params: { provider: 'socketio' },
-      result: [
-
-      ]
+      result: []
     }
 
     contextAfterPaginated = {
@@ -38,16 +33,18 @@ describe('Test group-students/hooks/one-group-per-student-per-semester.unit.test
       method: 'find',
       params: { provider: 'socketio' },
       result: {
-        data: [
-
-        ]
+        data: []
       }
     }
-    contextAfterPaginated.result.total = contextAfterPaginated.result.data.length
+    contextAfterPaginated.result.total =
+      contextAfterPaginated.result.data.length
   })
 
   it('Hook exists', () => {
-    assert(typeof oneGroupPerStudentPerSemester === 'function', 'Hook is not a function.')
+    assert(
+      typeof oneGroupPerStudentPerSemester === 'function',
+      'Hook is not a function.'
+    )
   })
 
   it('???', () => {

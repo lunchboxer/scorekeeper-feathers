@@ -1,4 +1,3 @@
-
 // Configure Feathers app. (Can be re-generated.)
 // !code: preface // !end
 const path = require('path')
@@ -35,23 +34,31 @@ app.set('generatorSpecs', generatorSpecs)
 // !end
 
 // Enable security, CORS, compression, favicon and body parsing
-app.use(helmet(
+app.use(
+  helmet()
   // !code: helmet_config // !end
-))
-app.use(cors(
+)
+app.use(
+  cors()
   // !code: cors_config // !end
-))
-app.use(compress(
+)
+app.use(
+  compress()
   // !code: compress_config // !end
-))
-app.use(express.json(
-  // !code: json_config // !end
-))
-app.use(express.urlencoded(
-  // !<DEFAULT> code: urlencoded_config
-  { extended: true }
-  // !end
-))
+)
+app.use(
+  express
+    .json
+    // !code: json_config // !end
+    ()
+)
+app.use(
+  express.urlencoded(
+    // !<DEFAULT> code: urlencoded_config
+    { extended: true }
+    // !end
+  )
+)
 app.use(favicon(path.join(app.get('public'), 'favicon.ico')))
 // !<DEFAULT> code: use_static
 // Host the public folder
@@ -61,12 +68,16 @@ app.use('/', express.static(app.get('public')))
 
 // Set up Plugins and providers
 // !code: config_start // !end
-app.configure(express.rest(
-  // !code: express_rest // !end
-))
-app.configure(socketio(
+app.configure(
+  express
+    .rest
+    // !code: express_rest // !end
+    ()
+)
+app.configure(
+  socketio()
   // !code: express_socketio // !end
-))
+)
 // Configure database adapters
 app.configure(mongodb)
 app.configure(mongoose)

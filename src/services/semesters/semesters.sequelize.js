@@ -1,4 +1,3 @@
-
 /* eslint quotes: 0 */
 // Defines Sequelize model for service `semesters`. (Can be re-generated.)
 const merge = require('lodash.merge')
@@ -8,7 +7,8 @@ const DataTypes = Sequelize.DataTypes
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+let moduleExports = merge(
+  {},
   // !<DEFAULT> code: sequelize_model
   {
     name: {
@@ -23,7 +23,7 @@ let moduleExports = merge({},
       type: DataTypes.DATE,
       allowNull: false
     }
-  },
+  }
   // !end
   // !code: moduleExports // !end
 )

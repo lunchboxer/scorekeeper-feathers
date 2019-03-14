@@ -1,4 +1,3 @@
-
 // Configure authentication. (Can be re-generated.)
 const authentication = require('@feathersjs/authentication')
 const jwt = require('@feathersjs/authentication-jwt')
@@ -26,16 +25,16 @@ let moduleExports = function (app) {
     before: {
       create: [
         // !<DEFAULT> code: before_create
-        authentication.hooks.authenticate(config.strategies),
+        authentication.hooks.authenticate(config.strategies)
         // !end
       ],
       remove: [
         // !<DEFAULT> code: before_remove
-        authentication.hooks.authenticate('jwt'),
+        authentication.hooks.authenticate('jwt')
         // !end
-      ],
+      ]
       // !code: before // !end
-    },
+    }
     // !code: after // !end
   })
   // !code: func_return // !end

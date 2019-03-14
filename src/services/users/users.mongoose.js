@@ -1,4 +1,3 @@
-
 /* eslint quotes: 0 */
 // Defines Mongoose model for service `users`. (Can be re-generated.)
 const merge = require('lodash.merge')
@@ -7,7 +6,8 @@ const mongoose = require('mongoose')
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+let moduleExports = merge(
+  {},
   // !<DEFAULT> code: model
   {
     username: {
@@ -19,7 +19,7 @@ let moduleExports = merge({},
     lastName: String,
     password: String,
     roleId: mongoose.Schema.Types.ObjectId
-  },
+  }
   // !end
   // !code: moduleExports // !end
 )

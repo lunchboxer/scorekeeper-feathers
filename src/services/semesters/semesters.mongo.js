@@ -1,37 +1,33 @@
-
 /* eslint quotes: 0 */
 // Defines the MongoDB $jsonSchema for service `semesters`. (Can be re-generated.)
 const merge = require('lodash.merge')
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+let moduleExports = merge(
+  {},
   // !<DEFAULT> code: model
   {
-    bsonType: "object",
+    bsonType: 'object',
     additionalProperties: false,
     properties: {
       _id: {
-        bsonType: "objectId"
+        bsonType: 'objectId'
       },
       name: {
-        bsonType: "string"
+        bsonType: 'string'
       },
       startDate: {
-        format: "date-time",
-        bsonType: "string"
+        format: 'date-time',
+        bsonType: 'string'
       },
       endDate: {
-        format: "date-time",
-        bsonType: "string"
+        format: 'date-time',
+        bsonType: 'string'
       }
     },
-    required: [
-      "name",
-      "startDate",
-      "endDate"
-    ]
-  },
+    required: ['name', 'startDate', 'endDate']
+  }
   // !end
   // !code: moduleExports // !end
 )

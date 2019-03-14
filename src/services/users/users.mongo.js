@@ -1,54 +1,52 @@
-
 /* eslint quotes: 0 */
 // Defines the MongoDB $jsonSchema for service `users`. (Can be re-generated.)
 const merge = require('lodash.merge')
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+let moduleExports = merge(
+  {},
   // !<DEFAULT> code: model
   {
-    bsonType: "object",
+    bsonType: 'object',
     additionalProperties: false,
     properties: {
       _id: {
-        bsonType: "objectId"
+        bsonType: 'objectId'
       },
       username: {
         minLegth: 2,
         maxLength: 30,
-        faker: "internet.userName",
-        bsonType: "string"
+        faker: 'internet.userName',
+        bsonType: 'string'
       },
       firstName: {
         minLength: 2,
         maxLength: 30,
-        faker: "name.firstName",
-        bsonType: "string"
+        faker: 'name.firstName',
+        bsonType: 'string'
       },
       lastName: {
         minLength: 2,
         maxLength: 30,
-        faker: "name.lastName",
-        bsonType: "string"
+        faker: 'name.lastName',
+        bsonType: 'string'
       },
       password: {
         faker: {
-          exp: "ctx.hashPassword(\"secret\")"
+          exp: 'ctx.hashPassword("secret")'
         },
-        bsonType: "string"
+        bsonType: 'string'
       },
       roleId: {
         faker: {
-          fk: "roles:random"
+          fk: 'roles:random'
         },
-        bsonType: "objectId"
+        bsonType: 'objectId'
       }
     },
-    required: [
-      "username"
-    ]
-  },
+    required: ['username']
+  }
   // !end
   // !code: moduleExports // !end
 )

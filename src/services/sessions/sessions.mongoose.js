@@ -1,4 +1,3 @@
-
 /* eslint quotes: 0 */
 // Defines Mongoose model for service `sessions`. (Can be re-generated.)
 const merge = require('lodash.merge')
@@ -7,18 +6,14 @@ const mongoose = require('mongoose')
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+let moduleExports = merge(
+  {},
   // !<DEFAULT> code: model
   {
     stage: {
       type: String,
-      enum: [
-        "Inactive",
-        "Active",
-        "Started",
-        "Ended"
-      ],
-      default: "Inactive",
+      enum: ['Inactive', 'Active', 'Started', 'Ended'],
+      default: 'Inactive',
       required: true
     },
     startsAt: {
@@ -33,7 +28,7 @@ let moduleExports = merge({},
       type: mongoose.Schema.Types.ObjectId,
       required: true
     }
-  },
+  }
   // !end
   // !code: moduleExports // !end
 )

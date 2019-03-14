@@ -1,4 +1,3 @@
-
 // Initializes the `sessions` service on path `/sessions`. (Can be re-generated.)
 const createService = require('feathers-mongoose')
 const createModel = require('../../models/sessions.model')
@@ -13,7 +12,7 @@ let moduleExports = function (app) {
 
   let options = {
     Model,
-    paginate,
+    paginate
     // !code: options_more // !end
   }
   // !code: options_change // !end

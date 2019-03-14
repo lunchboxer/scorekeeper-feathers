@@ -1,4 +1,3 @@
-
 // Initializes the `messages` service on path `/messages`. (Can be re-generated.)
 const createService = require('feathers-memory')
 const hooks = require('./messages.hooks')
@@ -6,12 +5,11 @@ const hooks = require('./messages.hooks')
 // !code: init // !end
 
 let moduleExports = function (app) {
-
   let paginate = app.get('paginate')
   // !code: func_init // !end
 
   let options = {
-    paginate,
+    paginate
     // !code: options_more // !end
   }
   // !code: options_change // !end

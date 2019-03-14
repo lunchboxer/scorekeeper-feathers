@@ -1,4 +1,3 @@
-
 // semesters-model.js - A Mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
@@ -14,7 +13,9 @@ let moduleExports = function (app) {
   // !code: mongoose_func_init // !end
 
   // !<DEFAULT> code: mongoose_client
-  const semesters = new mongooseClient.Schema(mongooseSchema, { timestamps: true })
+  const semesters = new mongooseClient.Schema(mongooseSchema, {
+    timestamps: true
+  })
   // !end
 
   let existingModel = mongooseClient.models['semesters'] // needed for client/server tests

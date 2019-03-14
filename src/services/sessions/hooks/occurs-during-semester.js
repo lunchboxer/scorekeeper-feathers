@@ -13,8 +13,8 @@ module.exports = function () {
         query: {
           $limit: 0,
           startDate: { $lte: date },
-          endDate: { $gte: date },
-        },
+          endDate: { $gte: date }
+        }
       })
       if (startsinSemester.total === 0) {
         throw new Error('Session must occur during an existing semester.')

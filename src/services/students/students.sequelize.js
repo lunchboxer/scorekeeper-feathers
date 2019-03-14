@@ -1,4 +1,3 @@
-
 /* eslint quotes: 0 */
 // Defines Sequelize model for service `students`. (Can be re-generated.)
 const merge = require('lodash.merge')
@@ -8,7 +7,8 @@ const DataTypes = Sequelize.DataTypes
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+let moduleExports = merge(
+  {},
   // !<DEFAULT> code: sequelize_model
   {
     chineseName: {
@@ -24,9 +24,9 @@ let moduleExports = merge({},
       type: DataTypes.DATEONLY
     },
     gender: {
-      type: Sequelize.ENUM(["F","M"])
+      type: Sequelize.ENUM(['F', 'M'])
     }
-  },
+  }
   // !end
   // !code: moduleExports // !end
 )

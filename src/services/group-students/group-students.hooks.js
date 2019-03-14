@@ -1,4 +1,3 @@
-
 // Hooks for service `groupStudents`. (Can be re-generated.)
 const commonHooks = require('feathers-hooks-common')
 const { authenticate } = require('@feathersjs/authentication').hooks
@@ -16,7 +15,14 @@ const oneGroupPerStudentPerSemester = require('./hooks/one-group-per-student-per
 // eslint-disable-next-line no-unused-vars
 const { iff } = commonHooks
 // eslint-disable-next-line no-unused-vars
-const { create, update, patch, validateCreate, validateUpdate, validatePatch } = require('./group-students.validate')
+const {
+  create,
+  update,
+  patch,
+  validateCreate,
+  validateUpdate,
+  validatePatch
+} = require('./group-students.validate')
 // !end
 
 // !code: init // !end

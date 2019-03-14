@@ -1,37 +1,33 @@
-
 /* eslint quotes: 0 */
 // Defines the MongoDB $jsonSchema for service `points`. (Can be re-generated.)
 const merge = require('lodash.merge')
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+let moduleExports = merge(
+  {},
   // !<DEFAULT> code: model
   {
-    bsonType: "object",
+    bsonType: 'object',
     additionalProperties: false,
     properties: {
       _id: {
-        bsonType: "objectId"
+        bsonType: 'objectId'
       },
       value: {
         minimum: -5,
         maximum: 5,
-        bsonType: "int"
+        bsonType: 'int'
       },
       studentId: {
-        bsonType: "objectId"
+        bsonType: 'objectId'
       },
       sessionId: {
-        bsonType: "objectId"
+        bsonType: 'objectId'
       }
     },
-    required: [
-      "value",
-      "studentId",
-      "sessionId"
-    ]
-  },
+    required: ['value', 'studentId', 'sessionId']
+  }
   // !end
   // !code: moduleExports // !end
 )

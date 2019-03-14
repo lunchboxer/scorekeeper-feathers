@@ -1,4 +1,3 @@
-
 // Define the Feathers schema for service `users`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
@@ -16,13 +15,13 @@ let schema = {
   // Required fields.
   required: [
     // !code: schema_required
-    'username',
+    'username'
     // !end
   ],
   // Fields with unique values.
   uniqueItemProperties: [
     // !code: schema_unique
-    'username',
+    'username'
     // !end
   ],
 
@@ -33,9 +32,9 @@ let schema = {
     firstName: { minLength: 2, maxLength: 30, faker: 'name.firstName' },
     lastName: { minLength: 2, maxLength: 30, faker: 'name.lastName' },
     password: { faker: { exp: 'ctx.hashPassword("secret")' } },
-    roleId: { type: 'ID', faker: { fk: 'roles:random' } },
+    roleId: { type: 'ID', faker: { fk: 'roles:random' } }
     // !end
-  },
+  }
   // !code: schema_more // !end
 }
 
@@ -46,7 +45,7 @@ let extensions = {
     // !code: graphql_header
     name: 'User',
     service: {
-      sort: { _id: 1 },
+      sort: { _id: 1 }
     },
     // sql: {
     //   sqlTable: 'Users',
@@ -63,16 +62,16 @@ let extensions = {
       // !<DEFAULT> code: graphql_add
       // __author__: { type: '__User__!', args: false, relation: { ourTable: '__authorId__', otherTable: '_id' } },
       // !end
-    },
+    }
     // !code: graphql_more // !end
-  },
+  }
 }
 
 // !code: more // !end
 
 let moduleExports = {
   schema,
-  extensions,
+  extensions
   // !code: moduleExports // !end
 }
 

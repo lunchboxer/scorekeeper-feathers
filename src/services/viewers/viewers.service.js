@@ -1,4 +1,3 @@
-
 // Initializes the `viewers` service on path `/viewers`. (Can be re-generated.)
 const createService = require('feathers-mongoose')
 const createModel = require('../../models/viewers.model')
@@ -13,7 +12,7 @@ let moduleExports = function (app) {
 
   let options = {
     Model,
-    paginate,
+    paginate
     // !code: options_more // !end
   }
   // !code: options_change // !end

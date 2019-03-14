@@ -1,4 +1,3 @@
-
 // Define the Feathers schema for service `sessions`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
@@ -17,7 +16,7 @@ let schema = {
     'stage',
     'startsAt',
     'endsAt',
-    'groupId',
+    'groupId'
     // !end
   ],
   // Fields with unique values.
@@ -30,13 +29,13 @@ let schema = {
     // !code: schema_properties
     stage: {
       enum: ['Inactive', 'Active', 'Started', 'Ended'],
-      default: 'Inactive',
+      default: 'Inactive'
     },
     startsAt: { format: 'date-time' },
     endsAt: { format: 'date-time' },
-    groupId: { type: 'ID' },
+    groupId: { type: 'ID' }
     // !end
-  },
+  }
   // !code: schema_more // !end
 }
 
@@ -47,7 +46,7 @@ let extensions = {
     // !code: graphql_header
     name: 'Session',
     service: {
-      sort: { _id: 1 },
+      sort: { _id: 1 }
     },
     // sql: {
     //   sqlTable: 'Sessions',
@@ -64,16 +63,16 @@ let extensions = {
       // !<DEFAULT> code: graphql_add
       // __author__: { type: '__User__!', args: false, relation: { ourTable: '__authorId__', otherTable: '_id' } },
       // !end
-    },
+    }
     // !code: graphql_more // !end
-  },
+  }
 }
 
 // !code: more // !end
 
 let moduleExports = {
   schema,
-  extensions,
+  extensions
   // !code: moduleExports // !end
 }
 

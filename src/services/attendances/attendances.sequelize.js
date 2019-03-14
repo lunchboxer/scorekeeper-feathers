@@ -1,4 +1,3 @@
-
 /* eslint quotes: 0 */
 // Defines Sequelize model for service `attendances`. (Can be re-generated.)
 const merge = require('lodash.merge')
@@ -8,11 +7,18 @@ const DataTypes = Sequelize.DataTypes
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = merge({},
+let moduleExports = merge(
+  {},
   // !<DEFAULT> code: sequelize_model
   {
     status: {
-      type: Sequelize.ENUM(["leftEarly","present","late","absent","lateLeftEarly"]),
+      type: Sequelize.ENUM([
+        'leftEarly',
+        'present',
+        'late',
+        'absent',
+        'lateLeftEarly'
+      ]),
       allowNull: false
     },
     arrivedAt: {
@@ -26,7 +32,7 @@ let moduleExports = merge({},
       type: DataTypes.INTEGER,
       allowNull: false
     }
-  },
+  }
   // !end
   // !code: moduleExports // !end
 )

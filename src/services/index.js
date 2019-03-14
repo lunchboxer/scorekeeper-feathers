@@ -1,4 +1,3 @@
-
 // Configure the Feathers services. (Can be re-generated.)
 let attendances = require('./attendances/attendances.service')
 let groupStudents = require('./group-students/group-students.service')

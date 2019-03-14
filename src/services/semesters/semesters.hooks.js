@@ -1,4 +1,3 @@
-
 // Hooks for service `semesters`. (Can be re-generated.)
 const commonHooks = require('feathers-hooks-common')
 const { authenticate } = require('@feathersjs/authentication').hooks
@@ -12,7 +11,14 @@ const mustEndAfterStarts = require('./hooks/must-end-after-starts')
 // eslint-disable-next-line no-unused-vars
 const { iff } = commonHooks
 // eslint-disable-next-line no-unused-vars
-const { create, update, patch, validateCreate, validateUpdate, validatePatch } = require('./semesters.validate')
+const {
+  create,
+  update,
+  patch,
+  validateCreate,
+  validateUpdate,
+  validatePatch
+} = require('./semesters.validate')
 // !end
 
 // !code: init // !end
@@ -28,7 +34,7 @@ let moduleExports = {
     create: [mustEndAfterStarts(), dateConflicts()],
     update: [mustEndAfterStarts(), dateConflicts()],
     patch: [mustEndAfterStarts(), dateConflicts()],
-    remove: [],
+    remove: []
     // !end
   },
 
@@ -54,7 +60,7 @@ let moduleExports = {
     patch: [],
     remove: []
     // !end
-  },
+  }
   // !code: moduleExports // !end
 }
 

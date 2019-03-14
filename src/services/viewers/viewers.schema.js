@@ -1,4 +1,3 @@
-
 // Define the Feathers schema for service `viewers`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
@@ -14,22 +13,22 @@ let schema = {
   // Required fields.
   required: [
     // !code: schema_required
-    'name',
+    'name'
     // !end
   ],
   // Fields with unique values.
   uniqueItemProperties: [
     // !code: schema_unique
-    'name',
+    'name'
     // !end
   ],
 
   // Fields in the model.
   properties: {
     // !code: schema_properties
-    name: {},
+    name: {}
     // !end
-  },
+  }
   // !code: schema_more // !end
 }
 
@@ -40,7 +39,7 @@ let extensions = {
     // !code: graphql_header
     name: 'Viewer',
     service: {
-      sort: { _id: 1 },
+      sort: { _id: 1 }
     },
     // sql: {
     //   sqlTable: 'Viewers',
@@ -57,16 +56,16 @@ let extensions = {
       // !<DEFAULT> code: graphql_add
       // __author__: { type: '__User__!', args: false, relation: { ourTable: '__authorId__', otherTable: '_id' } },
       // !end
-    },
+    }
     // !code: graphql_more // !end
-  },
+  }
 }
 
 // !code: more // !end
 
 let moduleExports = {
   schema,
-  extensions,
+  extensions
   // !code: moduleExports // !end
 }
 
