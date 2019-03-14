@@ -16,7 +16,7 @@ let schema = {
     // !code: schema_required
     'name',
     'startDate',
-    'endDate',
+    'endDate'
     // !end
   ],
   // Fields with unique values.
@@ -28,10 +28,10 @@ let schema = {
   properties: {
     // !code: schema_properties
     name: {},
-    startDate: { format: 'date' },
-    endDate: { format: 'date' },
+    startDate: { format: 'date-time' },
+    endDate: { format: 'date-time' }
     // !end
-  },
+  }
   // !code: schema_more // !end
 }
 
@@ -42,7 +42,7 @@ let extensions = {
     // !code: graphql_header
     name: 'Semester',
     service: {
-      sort: { _id: 1 },
+      sort: { _id: 1 }
     },
     // sql: {
     //   sqlTable: 'Semesters',
@@ -59,16 +59,16 @@ let extensions = {
       // !<DEFAULT> code: graphql_add
       // __author__: { type: '__User__!', args: false, relation: { ourTable: '__authorId__', otherTable: '_id' } },
       // !end
-    },
+    }
     // !code: graphql_more // !end
-  },
+  }
 }
 
 // !code: more // !end
 
 let moduleExports = {
   schema,
-  extensions,
+  extensions
   // !code: moduleExports // !end
 }
 

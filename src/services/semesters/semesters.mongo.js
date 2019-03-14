@@ -18,11 +18,11 @@ let moduleExports = merge({},
         bsonType: "string"
       },
       startDate: {
-        format: "date",
+        format: "date-time",
         bsonType: "string"
       },
       endDate: {
-        format: "date",
+        format: "date-time",
         bsonType: "string"
       }
     },

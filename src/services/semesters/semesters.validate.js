@@ -28,11 +28,11 @@ let base = merge({},
         type: "string"
       },
       startDate: {
-        format: "date",
+        format: "date-time",
         type: "string"
       },
       endDate: {
-        format: "date",
+        format: "date-time",
         type: "string"
       }
     }
