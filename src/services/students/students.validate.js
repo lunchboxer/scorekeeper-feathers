@@ -28,6 +28,8 @@ let base = merge({},
         type: "string"
       },
       pinyinName: {
+        minLength: 2,
+        pattern: "^[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜs']+$",
         type: "string"
       },
       englishName: {

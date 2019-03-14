@@ -21,6 +21,8 @@ let moduleExports = merge({},
         bsonType: "string"
       },
       pinyinName: {
+        minLength: 2,
+        pattern: "^[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜs']+$",
         bsonType: "string"
       },
       englishName: {

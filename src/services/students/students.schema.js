@@ -31,7 +31,7 @@ let schema = {
       // pattern: '/^\p{Unified_Ideograph}+$/u', // eslint-disable-line no-useless-escape
       pattern: '^[\u4e00-\u9fa5]+$',
     },
-    pinyinName: {},
+    pinyinName: { minLength: 2, pattern: "^[a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ\s']+$" },
     englishName: { minLength: 2, maxLength: 30, faker: 'name.firstName' },
     birthdate: { format: 'date' },
     gender: { enum: ['F', 'M'] },
